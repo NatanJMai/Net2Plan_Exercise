@@ -19,6 +19,7 @@ import com.net2plan.utils.Pair;
 import com.net2plan.utils.Triple;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -36,8 +37,12 @@ import java.util.Set;
  */
 public class CFA_shortestPathFixedUtilization implements IAlgorithm
 {
-	public int rejeitados 	 = 0;
-	public List <Link> Links = new ArrayList<Link>(); 
+	public int 				    rejeitados  = 0;
+	public List <Node> 		    Nodes 	    = new ArrayList<Node>(); 
+	public Map<Integer, Double> data_rate   = new HashMap<Integer, Double>();
+	
+	public int[][] demand_10 = new int[3][3];
+
 	
 	public void reject(){
 		rejeitados++;
@@ -77,31 +82,104 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 		return seqLinks;
 	}
 	
-	public boolean start_links(Set<Long> linkIds){
-		for(long l: linkIds){
-			Link new_link = new Link(l);
+	public void start_data_rates(){
+		data_rate.put(10, 25.0);
+		data_rate.put(40, 25.0);
+		data_rate.put(100, 37.5);
+		data_rate.put(400, 75.0);
+		data_rate.put(1000, 187.5);
+		return;
+	}
+	
+	public void start_demand_array(){
+		demand_10[0][0] = 0;
+		demand_10[0][1] = 1;
+		demand_10[0][2] = 1;
+		
+		demand_10[1][0] = 1;
+		demand_10[1][1] = 0;
+		demand_10[1][2] = 2;
+		
+		demand_10[2][0] = 2;
+		demand_10[2][1] = 1;
+		demand_10[2][2] = 0;
+		
+		return;
+	}
+	
+	public boolean start_nodes(Set<Long> nodeIds){
+		for(long l: nodeIds){
+			Node new_node = new Node(l);
 			
-			this.Links.add(new_link);
+			this.Nodes.add(new_node);
 		}
 		
-		return this.Links.isEmpty() ? false: true;
+		return this.Nodes.isEmpty() ? false: true;
 	}
+	
+	
+	public Node get_node(int id){
+		for(Node l: Nodes){
+			if(l.id == id){
+				return l;
+			}
+		}
+		
+		return null;
+	}
+	
+	
+	public void run_demand(){
+		int i, ind, j 	 = 0;
+		int rate     = 0;
+		
+		for(i = 0; i < 3; i++){
+			for(j = 0; j < 3; j++){
+				if(this.demand_10[i][j] != 0){
+					Node node_i = get_node(i);
+					Node node_j = get_node(j);
+					
+					System.out.print("No " + i + " -> " + j + "  = ");
+					rate = (int) ((data_rate.get(10) / 12.5) * demand_10[i][j]);
+					System.out.println(rate);
+					
+					node_i.insert_array(rate);
+					node_j.insert_array(rate);
+				}
+			}
+		}
+
+		for(Node n: Nodes){
+			System.out.println("------------------- No " + n.id);
+			for(ind = 0; ind < 15; ind++){
+				if(n.frequencia[ind] == true){
+					System.out.println("Freq " + n.frequencia[ind] + " " + ind);	
+				}
+			}	
+			
+			System.out.println();
+		}
+		
+		
+	}
+	
 	
 	@Override
 	public String executeAlgorithm(NetPlan netPlan, Map<String, String> algorithmParameters, Map<String, String> net2planParameters)
 	{
 		/* Basic checks */
 		Long origem 	= (long) 0;
-		Long destino	= (long) 10;
+		Long destino	= (long) 1;
 		
 		final int N = netPlan.getNumberOfNodes();
 		final int E = netPlan.getNumberOfLinks();
-		final int D = netPlan.getNumberOfDemands();
+		//final int D = netPlan.getNumberOfDemands();
 		
 		List<Long> primary_path   = new ArrayList<Long>();	
+		Set<Long>  nodeIds		  = netPlan.getNodeIds();
 		Set<Long>  linkIds 		  = netPlan.getLinkIds();
 		
-		if (N == 0 || E == 0 || D == 0)	throw new Net2PlanException("This algorithm natan a topology with links and a demand set");
+		if (N == 0 || E == 0)	throw new Net2PlanException("This algorithm natan a topology with links and a demand set");
 
 		/* Initialize some variables */
 		final double cg = Double.parseDouble(algorithmParameters.get("cg"));
@@ -118,13 +196,12 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 			reject();
 		}
 		
+		/* Inicializa vetor de nos para a criacao das classes */
+		if (! start_nodes(nodeIds)) error();
 		
-		/* Inicializa vetor de links para a criacao das classes */
-		if (! start_links(linkIds)) error();
-		
-		for(Link l: this.Links){
-			System.out.println(l.demand_array);
-		}
+		start_data_rates();
+		start_demand_array();
+		run_demand();
 		
 		
 		
