@@ -159,10 +159,26 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 			
 			System.out.println();
 		}
-		
-		
 	}
 	
+	
+	public void test_demand(){
+		int i 	 	= 0;
+		Node node_i = get_node(1);
+		
+		for(i = 0;  i < 5;  i++) node_i.frequencia[i] = true;
+		for(i = 20; i < 25; i++) node_i.frequencia[i] = true;
+		
+//		0  -> 4  True;
+//		5  -> 9  True;
+//		20 -> 24 True;
+		
+		node_i.insert_array(4);
+		
+		for(i = 0; i < 30; i++){
+			System.out.println("Indice " + i + " -> " + node_i.frequencia[i]);
+		}
+	}
 	
 	@Override
 	public String executeAlgorithm(NetPlan netPlan, Map<String, String> algorithmParameters, Map<String, String> net2planParameters)
@@ -199,10 +215,16 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 		/* Inicializa vetor de nos para a criacao das classes */
 		if (! start_nodes(nodeIds)) error();
 		
+		/* Inicializa a lista de taxa de dados */
 		start_data_rates();
-		start_demand_array();
-		run_demand();
 		
+		/* Inicializa a matriz de demanda */
+		start_demand_array();
+		
+		/* Faz o calculo conforme a demanda 
+		run_demand();*/
+		
+		test_demand();
 		
 		
 
