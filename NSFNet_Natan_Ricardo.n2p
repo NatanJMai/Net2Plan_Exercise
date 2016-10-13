@@ -1,0 +1,778 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<network description="National Science Foundation (NSF) Network with 14 nodes and 42 unidirectional links, including a demand set. Shortest-path routing (measured in hops) is used. Then, with 1+1 link-disjoint dedicated protection is computed&#xa;&#xa;Source: R. Ramaswami, K.N. Sivarajan, &quot;Design of Logical Topologies for Wavelength-routed Optical Networks,&quot; IEEE Journal on Selected Areas in Communications, vol. 14, no. 5, pp. 840-851, June 1996" name="NSFNet" version="3">
+	<node id="0" xCoord="-122.2916667" yCoord="47.6583333" name="Seattle (WA)">
+		<attribute key="population" value="620778"/>
+		<attribute key="timezone" value="-8"/>
+	</node>
+	<node id="1" xCoord="-122.1633333" yCoord="37.4416667" name="Palo Alto (CA)">
+		<attribute key="population" value="65412"/>
+		<attribute key="timezone" value="-8"/>
+	</node>
+	<node id="2" xCoord="-117.2388889" yCoord="32.8852778" name="San Diego (CA)">
+		<attribute key="population" value="1326000"/>
+		<attribute key="timezone" value="-8"/>
+	</node>
+	<node id="3" xCoord="-111.8427778" yCoord="40.7683333" name="Salt Lake City (UT)">
+		<attribute key="population" value="189899"/>
+		<attribute key="timezone" value="-7"/>
+	</node>
+	<node id="4" xCoord="-102.37120056152344" yCoord="35.844058990478516" name="Boulder (CO)">
+		<attribute key="population" value="98889"/>
+		<attribute key="timezone" value="-7"/>
+	</node>
+	<node id="5" xCoord="-95.3602778" yCoord="29.7572222" name="Houston (TX)">
+		<attribute key="population" value="2145000"/>
+		<attribute key="timezone" value="-6"/>
+	</node>
+	<node id="6" xCoord="-96.6969444" yCoord="40.8230556" name="Lincoln (NE)">
+		<attribute key="population" value="262341"/>
+		<attribute key="timezone" value="-6"/>
+	</node>
+	<node id="7" xCoord="-90.55075073242188" yCoord="56.13380432128906" name="Urbana-Champaign (IL)">
+		<attribute key="population" value="81291"/>
+		<attribute key="timezone" value="-6"/>
+	</node>
+	<node id="8" xCoord="-69.46891021728516" yCoord="60.27705764770508" name="Pittsburgh (PA)">
+		<attribute key="population" value="307484"/>
+		<attribute key="timezone" value="-5"/>
+	</node>
+	<node id="9" xCoord="-71.90612030029297" yCoord="37.7938232421875" name="Atlanta (GA)">
+		<attribute key="population" value="432427"/>
+		<attribute key="timezone" value="-5"/>
+	</node>
+	<node id="10" xCoord="-87.6260986328125" yCoord="37.91568374633789" name="Ann Arbor (MI)">
+		<attribute key="population" value="114925"/>
+		<attribute key="timezone" value="-5"/>
+	</node>
+	<node id="11" xCoord="-83.05633544921875" yCoord="51.807762145996094" name="Ithaca (NY)">
+		<attribute key="population" value="30054"/>
+		<attribute key="timezone" value="-5"/>
+	</node>
+	<node id="12" xCoord="-62.34008026123047" yCoord="45.53195571899414" name="Princeton (NJ)">
+		<attribute key="population" value="28572"/>
+		<attribute key="timezone" value="-5"/>
+	</node>
+	<node id="13" xCoord="-75.37913513183594" yCoord="19.0882625579834" name="College Park (MD)">
+		<attribute key="population" value="30587"/>
+		<attribute key="timezone" value="-5"/>
+	</node>
+	<layer id="0" name="" description="" linkCapacityUnitsName="" demandTrafficUnitsName="">
+		<link id="0" originNodeId="0" destinationNodeId="1" capacity="1331.8933333333337" lengthInKm="1100.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="1" originNodeId="0" destinationNodeId="2" capacity="400.0433333333335" lengthInKm="1600.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="2" originNodeId="0" destinationNodeId="7" capacity="392.22333333333336" lengthInKm="2800.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="3" originNodeId="1" destinationNodeId="0" capacity="838.8000000000003" lengthInKm="1100.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="4" originNodeId="1" destinationNodeId="2" capacity="409.9133333333331" lengthInKm="600.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="5" originNodeId="1" destinationNodeId="3" capacity="639.6966666666668" lengthInKm="1000.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="6" originNodeId="2" destinationNodeId="0" capacity="603.7633333333331" lengthInKm="1600.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="7" originNodeId="2" destinationNodeId="1" capacity="707.3066666666664" lengthInKm="600.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="8" originNodeId="2" destinationNodeId="5" capacity="394.46" lengthInKm="2000.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="9" originNodeId="3" destinationNodeId="1" capacity="304.86000000000007" lengthInKm="1000.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="10" originNodeId="3" destinationNodeId="4" capacity="250.63666666666668" lengthInKm="600.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="11" originNodeId="3" destinationNodeId="10" capacity="403.1433333333333" lengthInKm="2400.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="12" originNodeId="4" destinationNodeId="3" capacity="336.2966666666667" lengthInKm="600.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="13" originNodeId="4" destinationNodeId="5" capacity="484.66" lengthInKm="1100.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="14" originNodeId="4" destinationNodeId="6" capacity="367.5900000000001" lengthInKm="800.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="15" originNodeId="5" destinationNodeId="2" capacity="397.09999999999997" lengthInKm="2000.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="16" originNodeId="5" destinationNodeId="4" capacity="466.95666666666676" lengthInKm="1100.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="17" originNodeId="5" destinationNodeId="9" capacity="283.0366666666667" lengthInKm="1200.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="18" originNodeId="5" destinationNodeId="13" capacity="437.84000000000003" lengthInKm="2000.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="19" originNodeId="6" destinationNodeId="4" capacity="462.3333333333333" lengthInKm="800.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="20" originNodeId="6" destinationNodeId="7" capacity="371.82" lengthInKm="700.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="21" originNodeId="7" destinationNodeId="0" capacity="251.77666666666673" lengthInKm="2800.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="22" originNodeId="7" destinationNodeId="6" capacity="443.28666666666663" lengthInKm="700.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="23" originNodeId="7" destinationNodeId="8" capacity="637.4300000000001" lengthInKm="700.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="24" originNodeId="8" destinationNodeId="7" capacity="458.3300000000001" lengthInKm="700.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="25" originNodeId="8" destinationNodeId="9" capacity="340.68" lengthInKm="900.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="26" originNodeId="8" destinationNodeId="11" capacity="234.98000000000002" lengthInKm="500.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="27" originNodeId="8" destinationNodeId="12" capacity="564.4300000000001" lengthInKm="500.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="28" originNodeId="9" destinationNodeId="5" capacity="299.8833333333334" lengthInKm="1200.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="29" originNodeId="9" destinationNodeId="8" capacity="282.04333333333335" lengthInKm="900.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="30" originNodeId="10" destinationNodeId="3" capacity="372.38" lengthInKm="2400.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="31" originNodeId="10" destinationNodeId="11" capacity="119.41666666666669" lengthInKm="800.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="32" originNodeId="10" destinationNodeId="12" capacity="367.5133333333333" lengthInKm="800.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="33" originNodeId="11" destinationNodeId="8" capacity="256.13666666666666" lengthInKm="500.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="34" originNodeId="11" destinationNodeId="10" capacity="86.76333333333332" lengthInKm="800.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="35" originNodeId="11" destinationNodeId="13" capacity="136.06" lengthInKm="300.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="36" originNodeId="12" destinationNodeId="8" capacity="473.39" lengthInKm="500.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="37" originNodeId="12" destinationNodeId="10" capacity="397.66999999999996" lengthInKm="800.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="38" originNodeId="12" destinationNodeId="13" capacity="326.15000000000003" lengthInKm="300.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="39" originNodeId="13" destinationNodeId="5" capacity="439.47" lengthInKm="2000.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="40" originNodeId="13" destinationNodeId="11" capacity="128.14000000000001" lengthInKm="300.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<link id="41" originNodeId="13" destinationNodeId="12" capacity="372.12333333333333" lengthInKm="300.0" propagationSpeedInKmPerSecond="200000.0"/>
+		<demand id="0" ingressNodeId="0" egressNodeId="1" offeredTraffic="30.008"/>
+		<demand id="1" ingressNodeId="0" egressNodeId="2" offeredTraffic="11.93"/>
+		<demand id="2" ingressNodeId="0" egressNodeId="3" offeredTraffic="31.22"/>
+		<demand id="3" ingressNodeId="0" egressNodeId="4" offeredTraffic="32.504"/>
+		<demand id="4" ingressNodeId="0" egressNodeId="5" offeredTraffic="18.35"/>
+		<demand id="5" ingressNodeId="0" egressNodeId="6" offeredTraffic="23.9"/>
+		<demand id="6" ingressNodeId="0" egressNodeId="7" offeredTraffic="25.766"/>
+		<demand id="7" ingressNodeId="0" egressNodeId="8" offeredTraffic="19.034"/>
+		<demand id="8" ingressNodeId="0" egressNodeId="9" offeredTraffic="21.746"/>
+		<demand id="9" ingressNodeId="0" egressNodeId="10" offeredTraffic="16.57"/>
+		<demand id="10" ingressNodeId="0" egressNodeId="11" offeredTraffic="21.93"/>
+		<demand id="11" ingressNodeId="0" egressNodeId="12" offeredTraffic="16.722"/>
+		<demand id="12" ingressNodeId="0" egressNodeId="13" offeredTraffic="23.23"/>
+		<demand id="13" ingressNodeId="1" egressNodeId="0" offeredTraffic="32.576"/>
+		<demand id="14" ingressNodeId="1" egressNodeId="2" offeredTraffic="12.902"/>
+		<demand id="15" ingressNodeId="1" egressNodeId="3" offeredTraffic="29.784"/>
+		<demand id="16" ingressNodeId="1" egressNodeId="4" offeredTraffic="15.814"/>
+		<demand id="17" ingressNodeId="1" egressNodeId="5" offeredTraffic="18.62"/>
+		<demand id="18" ingressNodeId="1" egressNodeId="6" offeredTraffic="26.252"/>
+		<demand id="19" ingressNodeId="1" egressNodeId="7" offeredTraffic="17.488"/>
+		<demand id="20" ingressNodeId="1" egressNodeId="8" offeredTraffic="15.096"/>
+		<demand id="21" ingressNodeId="1" egressNodeId="9" offeredTraffic="11.738"/>
+		<demand id="22" ingressNodeId="1" egressNodeId="10" offeredTraffic="19.274"/>
+		<demand id="23" ingressNodeId="1" egressNodeId="11" offeredTraffic="18.708"/>
+		<demand id="24" ingressNodeId="1" egressNodeId="12" offeredTraffic="11.364"/>
+		<demand id="25" ingressNodeId="1" egressNodeId="13" offeredTraffic="17.13"/>
+		<demand id="26" ingressNodeId="2" egressNodeId="0" offeredTraffic="21.092"/>
+		<demand id="27" ingressNodeId="2" egressNodeId="1" offeredTraffic="26.866"/>
+		<demand id="28" ingressNodeId="2" egressNodeId="3" offeredTraffic="30.678"/>
+		<demand id="29" ingressNodeId="2" egressNodeId="4" offeredTraffic="17.066"/>
+		<demand id="30" ingressNodeId="2" egressNodeId="5" offeredTraffic="26.14"/>
+		<demand id="31" ingressNodeId="2" egressNodeId="6" offeredTraffic="10.462"/>
+		<demand id="32" ingressNodeId="2" egressNodeId="7" offeredTraffic="24.626"/>
+		<demand id="33" ingressNodeId="2" egressNodeId="8" offeredTraffic="12.312"/>
+		<demand id="34" ingressNodeId="2" egressNodeId="9" offeredTraffic="26.188"/>
+		<demand id="35" ingressNodeId="2" egressNodeId="10" offeredTraffic="23.086"/>
+		<demand id="36" ingressNodeId="2" egressNodeId="11" offeredTraffic="15.894"/>
+		<demand id="37" ingressNodeId="2" egressNodeId="12" offeredTraffic="17.2"/>
+		<demand id="38" ingressNodeId="2" egressNodeId="13" offeredTraffic="12.616"/>
+		<demand id="39" ingressNodeId="3" egressNodeId="0" offeredTraffic="33.054"/>
+		<demand id="40" ingressNodeId="3" egressNodeId="1" offeredTraffic="23.628"/>
+		<demand id="41" ingressNodeId="3" egressNodeId="2" offeredTraffic="27.16"/>
+		<demand id="42" ingressNodeId="3" egressNodeId="4" offeredTraffic="14.664"/>
+		<demand id="43" ingressNodeId="3" egressNodeId="5" offeredTraffic="15.168"/>
+		<demand id="44" ingressNodeId="3" egressNodeId="6" offeredTraffic="14.696"/>
+		<demand id="45" ingressNodeId="3" egressNodeId="7" offeredTraffic="20.144"/>
+		<demand id="46" ingressNodeId="3" egressNodeId="8" offeredTraffic="22.184"/>
+		<demand id="47" ingressNodeId="3" egressNodeId="9" offeredTraffic="21.1"/>
+		<demand id="48" ingressNodeId="3" egressNodeId="10" offeredTraffic="17.034"/>
+		<demand id="49" ingressNodeId="3" egressNodeId="11" offeredTraffic="11.068"/>
+		<demand id="50" ingressNodeId="3" egressNodeId="12" offeredTraffic="9.45"/>
+		<demand id="51" ingressNodeId="3" egressNodeId="13" offeredTraffic="24.728"/>
+		<demand id="52" ingressNodeId="4" egressNodeId="0" offeredTraffic="17.72"/>
+		<demand id="53" ingressNodeId="4" egressNodeId="1" offeredTraffic="11.754"/>
+		<demand id="54" ingressNodeId="4" egressNodeId="2" offeredTraffic="12.87"/>
+		<demand id="55" ingressNodeId="4" egressNodeId="3" offeredTraffic="28.15"/>
+		<demand id="56" ingressNodeId="4" egressNodeId="5" offeredTraffic="14.426"/>
+		<demand id="57" ingressNodeId="4" egressNodeId="6" offeredTraffic="35.358"/>
+		<demand id="58" ingressNodeId="4" egressNodeId="7" offeredTraffic="22.87"/>
+		<demand id="59" ingressNodeId="4" egressNodeId="8" offeredTraffic="27.376"/>
+		<demand id="60" ingressNodeId="4" egressNodeId="9" offeredTraffic="25.35"/>
+		<demand id="61" ingressNodeId="4" egressNodeId="10" offeredTraffic="20.12"/>
+		<demand id="62" ingressNodeId="4" egressNodeId="11" offeredTraffic="23.23"/>
+		<demand id="63" ingressNodeId="4" egressNodeId="12" offeredTraffic="20.454"/>
+		<demand id="64" ingressNodeId="4" egressNodeId="13" offeredTraffic="20.502"/>
+		<demand id="65" ingressNodeId="5" egressNodeId="0" offeredTraffic="19.936"/>
+		<demand id="66" ingressNodeId="5" egressNodeId="1" offeredTraffic="10.988"/>
+		<demand id="67" ingressNodeId="5" egressNodeId="2" offeredTraffic="20.782"/>
+		<demand id="68" ingressNodeId="5" egressNodeId="3" offeredTraffic="15.2"/>
+		<demand id="69" ingressNodeId="5" egressNodeId="4" offeredTraffic="30.59"/>
+		<demand id="70" ingressNodeId="5" egressNodeId="6" offeredTraffic="23.396"/>
+		<demand id="71" ingressNodeId="5" egressNodeId="7" offeredTraffic="21.538"/>
+		<demand id="72" ingressNodeId="5" egressNodeId="8" offeredTraffic="18.468"/>
+		<demand id="73" ingressNodeId="5" egressNodeId="9" offeredTraffic="16.986"/>
+		<demand id="74" ingressNodeId="5" egressNodeId="10" offeredTraffic="22.224"/>
+		<demand id="75" ingressNodeId="5" egressNodeId="11" offeredTraffic="16.396"/>
+		<demand id="76" ingressNodeId="5" egressNodeId="12" offeredTraffic="22.24"/>
+		<demand id="77" ingressNodeId="5" egressNodeId="13" offeredTraffic="24.936"/>
+		<demand id="78" ingressNodeId="6" egressNodeId="0" offeredTraffic="29.402"/>
+		<demand id="79" ingressNodeId="6" egressNodeId="1" offeredTraffic="15.566"/>
+		<demand id="80" ingressNodeId="6" egressNodeId="2" offeredTraffic="23.214"/>
+		<demand id="81" ingressNodeId="6" egressNodeId="3" offeredTraffic="21.938"/>
+		<demand id="82" ingressNodeId="6" egressNodeId="4" offeredTraffic="18.524"/>
+		<demand id="83" ingressNodeId="6" egressNodeId="5" offeredTraffic="34.458"/>
+		<demand id="84" ingressNodeId="6" egressNodeId="7" offeredTraffic="25.302"/>
+		<demand id="85" ingressNodeId="6" egressNodeId="8" offeredTraffic="12.958"/>
+		<demand id="86" ingressNodeId="6" egressNodeId="9" offeredTraffic="26.38"/>
+		<demand id="87" ingressNodeId="6" egressNodeId="10" offeredTraffic="26.076"/>
+		<demand id="88" ingressNodeId="6" egressNodeId="11" offeredTraffic="14.338"/>
+		<demand id="89" ingressNodeId="6" egressNodeId="12" offeredTraffic="31.444"/>
+		<demand id="90" ingressNodeId="6" egressNodeId="13" offeredTraffic="21.148"/>
+		<demand id="91" ingressNodeId="7" egressNodeId="0" offeredTraffic="22.488"/>
+		<demand id="92" ingressNodeId="7" egressNodeId="1" offeredTraffic="9.058"/>
+		<demand id="93" ingressNodeId="7" egressNodeId="2" offeredTraffic="22.782"/>
+		<demand id="94" ingressNodeId="7" egressNodeId="3" offeredTraffic="25.494"/>
+		<demand id="95" ingressNodeId="7" egressNodeId="4" offeredTraffic="32.106"/>
+		<demand id="96" ingressNodeId="7" egressNodeId="5" offeredTraffic="32.496"/>
+		<demand id="97" ingressNodeId="7" egressNodeId="6" offeredTraffic="34.258"/>
+		<demand id="98" ingressNodeId="7" egressNodeId="8" offeredTraffic="26.53"/>
+		<demand id="99" ingressNodeId="7" egressNodeId="9" offeredTraffic="36.778"/>
+		<demand id="100" ingressNodeId="7" egressNodeId="10" offeredTraffic="33.142"/>
+		<demand id="101" ingressNodeId="7" egressNodeId="11" offeredTraffic="26.658"/>
+		<demand id="102" ingressNodeId="7" egressNodeId="12" offeredTraffic="29.872"/>
+		<demand id="103" ingressNodeId="7" egressNodeId="13" offeredTraffic="36.522"/>
+		<demand id="104" ingressNodeId="8" egressNodeId="0" offeredTraffic="12.878"/>
+		<demand id="105" ingressNodeId="8" egressNodeId="1" offeredTraffic="14.824"/>
+		<demand id="106" ingressNodeId="8" egressNodeId="2" offeredTraffic="21.02"/>
+		<demand id="107" ingressNodeId="8" egressNodeId="3" offeredTraffic="27.456"/>
+		<demand id="108" ingressNodeId="8" egressNodeId="4" offeredTraffic="14.96"/>
+		<demand id="109" ingressNodeId="8" egressNodeId="5" offeredTraffic="16.116"/>
+		<demand id="110" ingressNodeId="8" egressNodeId="6" offeredTraffic="30.168"/>
+		<demand id="111" ingressNodeId="8" egressNodeId="7" offeredTraffic="14.586"/>
+		<demand id="112" ingressNodeId="8" egressNodeId="9" offeredTraffic="20.678"/>
+		<demand id="113" ingressNodeId="8" egressNodeId="10" offeredTraffic="29.466"/>
+		<demand id="114" ingressNodeId="8" egressNodeId="11" offeredTraffic="36.044"/>
+		<demand id="115" ingressNodeId="8" egressNodeId="12" offeredTraffic="31.978"/>
+		<demand id="116" ingressNodeId="8" egressNodeId="13" offeredTraffic="14.752"/>
+		<demand id="117" ingressNodeId="9" egressNodeId="0" offeredTraffic="23.652"/>
+		<demand id="118" ingressNodeId="9" egressNodeId="1" offeredTraffic="20.016"/>
+		<demand id="119" ingressNodeId="9" egressNodeId="2" offeredTraffic="10.886"/>
+		<demand id="120" ingressNodeId="9" egressNodeId="3" offeredTraffic="15.256"/>
+		<demand id="121" ingressNodeId="9" egressNodeId="4" offeredTraffic="15.024"/>
+		<demand id="122" ingressNodeId="9" egressNodeId="5" offeredTraffic="15.272"/>
+		<demand id="123" ingressNodeId="9" egressNodeId="6" offeredTraffic="21.284"/>
+		<demand id="124" ingressNodeId="9" egressNodeId="7" offeredTraffic="20.486"/>
+		<demand id="125" ingressNodeId="9" egressNodeId="8" offeredTraffic="32.034"/>
+		<demand id="126" ingressNodeId="9" egressNodeId="10" offeredTraffic="29.458"/>
+		<demand id="127" ingressNodeId="9" egressNodeId="11" offeredTraffic="26.3"/>
+		<demand id="128" ingressNodeId="9" egressNodeId="12" offeredTraffic="21.196"/>
+		<demand id="129" ingressNodeId="9" egressNodeId="13" offeredTraffic="27.728"/>
+		<demand id="130" ingressNodeId="10" egressNodeId="0" offeredTraffic="20.478"/>
+		<demand id="131" ingressNodeId="10" egressNodeId="1" offeredTraffic="9.888"/>
+		<demand id="132" ingressNodeId="10" egressNodeId="2" offeredTraffic="16.476"/>
+		<demand id="133" ingressNodeId="10" egressNodeId="3" offeredTraffic="14.744"/>
+		<demand id="134" ingressNodeId="10" egressNodeId="4" offeredTraffic="32.496"/>
+		<demand id="135" ingressNodeId="10" egressNodeId="5" offeredTraffic="27.878"/>
+		<demand id="136" ingressNodeId="10" egressNodeId="6" offeredTraffic="16.3"/>
+		<demand id="137" ingressNodeId="10" egressNodeId="7" offeredTraffic="14.96"/>
+		<demand id="138" ingressNodeId="10" egressNodeId="8" offeredTraffic="41.372"/>
+		<demand id="139" ingressNodeId="10" egressNodeId="9" offeredTraffic="20.582"/>
+		<demand id="140" ingressNodeId="10" egressNodeId="11" offeredTraffic="41.874"/>
+		<demand id="141" ingressNodeId="10" egressNodeId="12" offeredTraffic="28.82"/>
+		<demand id="142" ingressNodeId="10" egressNodeId="13" offeredTraffic="19.17"/>
+		<demand id="143" ingressNodeId="11" egressNodeId="0" offeredTraffic="10.638"/>
+		<demand id="144" ingressNodeId="11" egressNodeId="1" offeredTraffic="8.318"/>
+		<demand id="145" ingressNodeId="11" egressNodeId="2" offeredTraffic="15.192"/>
+		<demand id="146" ingressNodeId="11" egressNodeId="3" offeredTraffic="24.586"/>
+		<demand id="147" ingressNodeId="11" egressNodeId="4" offeredTraffic="18.74"/>
+		<demand id="148" ingressNodeId="11" egressNodeId="5" offeredTraffic="13.98"/>
+		<demand id="149" ingressNodeId="11" egressNodeId="6" offeredTraffic="14.688"/>
+		<demand id="150" ingressNodeId="11" egressNodeId="7" offeredTraffic="29.816"/>
+		<demand id="151" ingressNodeId="11" egressNodeId="8" offeredTraffic="36.634"/>
+		<demand id="152" ingressNodeId="11" egressNodeId="9" offeredTraffic="25.256"/>
+		<demand id="153" ingressNodeId="11" egressNodeId="10" offeredTraffic="19.154"/>
+		<demand id="154" ingressNodeId="11" egressNodeId="12" offeredTraffic="36.65"/>
+		<demand id="155" ingressNodeId="11" egressNodeId="13" offeredTraffic="33.724"/>
+		<demand id="156" ingressNodeId="12" egressNodeId="0" offeredTraffic="11.276"/>
+		<demand id="157" ingressNodeId="12" egressNodeId="1" offeredTraffic="16.594"/>
+		<demand id="158" ingressNodeId="12" egressNodeId="2" offeredTraffic="13.374"/>
+		<demand id="159" ingressNodeId="12" egressNodeId="3" offeredTraffic="12.6"/>
+		<demand id="160" ingressNodeId="12" egressNodeId="4" offeredTraffic="16.044"/>
+		<demand id="161" ingressNodeId="12" egressNodeId="5" offeredTraffic="21.228"/>
+		<demand id="162" ingressNodeId="12" egressNodeId="6" offeredTraffic="14.864"/>
+		<demand id="163" ingressNodeId="12" egressNodeId="7" offeredTraffic="27.472"/>
+		<demand id="164" ingressNodeId="12" egressNodeId="8" offeredTraffic="22.376"/>
+		<demand id="165" ingressNodeId="12" egressNodeId="9" offeredTraffic="27.272"/>
+		<demand id="166" ingressNodeId="12" egressNodeId="10" offeredTraffic="30.51"/>
+		<demand id="167" ingressNodeId="12" egressNodeId="11" offeredTraffic="15.718"/>
+		<demand id="168" ingressNodeId="12" egressNodeId="13" offeredTraffic="21.994"/>
+		<demand id="169" ingressNodeId="13" egressNodeId="0" offeredTraffic="18.166"/>
+		<demand id="170" ingressNodeId="13" egressNodeId="1" offeredTraffic="17.224"/>
+		<demand id="171" ingressNodeId="13" egressNodeId="2" offeredTraffic="10.94"/>
+		<demand id="172" ingressNodeId="13" egressNodeId="3" offeredTraffic="23.492"/>
+		<demand id="173" ingressNodeId="13" egressNodeId="4" offeredTraffic="16.476"/>
+		<demand id="174" ingressNodeId="13" egressNodeId="5" offeredTraffic="29.672"/>
+		<demand id="175" ingressNodeId="13" egressNodeId="6" offeredTraffic="21.156"/>
+		<demand id="176" ingressNodeId="13" egressNodeId="7" offeredTraffic="37.058"/>
+		<demand id="177" ingressNodeId="13" egressNodeId="8" offeredTraffic="28.9"/>
+		<demand id="178" ingressNodeId="13" egressNodeId="9" offeredTraffic="23.612"/>
+		<demand id="179" ingressNodeId="13" egressNodeId="10" offeredTraffic="35.884"/>
+		<demand id="180" ingressNodeId="13" egressNodeId="11" offeredTraffic="21.364"/>
+		<demand id="181" ingressNodeId="13" egressNodeId="12" offeredTraffic="38.046"/>
+		<sourceRouting>
+			<protectionSegment id="0" reservedCapacity="30.008" seqLinks="1 7"/>
+			<protectionSegment id="1" reservedCapacity="11.93" seqLinks="0 4"/>
+			<protectionSegment id="2" reservedCapacity="31.22" seqLinks="1 8 16 12"/>
+			<protectionSegment id="3" reservedCapacity="32.504" seqLinks="0 5 10"/>
+			<protectionSegment id="4" reservedCapacity="18.35" seqLinks="2 23 25 28"/>
+			<protectionSegment id="5" reservedCapacity="23.9" seqLinks="0 5 10 14"/>
+			<protectionSegment id="6" reservedCapacity="25.766" seqLinks="0 5 10 14 20"/>
+			<protectionSegment id="7" reservedCapacity="19.034" seqLinks="1 8 17 29"/>
+			<protectionSegment id="8" reservedCapacity="21.746" seqLinks="1 8 17"/>
+			<protectionSegment id="9" reservedCapacity="16.57" seqLinks="2 23 26 34"/>
+			<protectionSegment id="10" reservedCapacity="21.93" seqLinks="0 5 11 31"/>
+			<protectionSegment id="11" reservedCapacity="16.722" seqLinks="0 5 11 32"/>
+			<protectionSegment id="12" reservedCapacity="23.23" seqLinks="2 23 26 35"/>
+			<protectionSegment id="13" reservedCapacity="32.576" seqLinks="4 6"/>
+			<protectionSegment id="14" reservedCapacity="12.902" seqLinks="3 1"/>
+			<protectionSegment id="15" reservedCapacity="29.784" seqLinks="4 8 16 12"/>
+			<protectionSegment id="16" reservedCapacity="15.814" seqLinks="4 8 16"/>
+			<protectionSegment id="17" reservedCapacity="18.62" seqLinks="5 10 13"/>
+			<protectionSegment id="18" reservedCapacity="26.252" seqLinks="5 10 14"/>
+			<protectionSegment id="19" reservedCapacity="17.488" seqLinks="5 10 14 20"/>
+			<protectionSegment id="20" reservedCapacity="15.096" seqLinks="5 11 31 33"/>
+			<protectionSegment id="21" reservedCapacity="11.738" seqLinks="3 2 23 25"/>
+			<protectionSegment id="22" reservedCapacity="19.274" seqLinks="3 2 23 27 37"/>
+			<protectionSegment id="23" reservedCapacity="18.708" seqLinks="3 2 23 26"/>
+			<protectionSegment id="24" reservedCapacity="11.364" seqLinks="3 2 23 27"/>
+			<protectionSegment id="25" reservedCapacity="17.13" seqLinks="5 11 31 35"/>
+			<protectionSegment id="26" reservedCapacity="21.092" seqLinks="7 3"/>
+			<protectionSegment id="27" reservedCapacity="26.866" seqLinks="6 0"/>
+			<protectionSegment id="28" reservedCapacity="30.678" seqLinks="8 16 12"/>
+			<protectionSegment id="29" reservedCapacity="17.066" seqLinks="7 5 10"/>
+			<protectionSegment id="30" reservedCapacity="26.14" seqLinks="7 5 10 13"/>
+			<protectionSegment id="31" reservedCapacity="10.462" seqLinks="8 16 14"/>
+			<protectionSegment id="32" reservedCapacity="24.626" seqLinks="8 17 29 24"/>
+			<protectionSegment id="33" reservedCapacity="12.312" seqLinks="8 17 29"/>
+			<protectionSegment id="34" reservedCapacity="26.188" seqLinks="6 2 23 25"/>
+			<protectionSegment id="35" reservedCapacity="23.086" seqLinks="8 18 40 34"/>
+			<protectionSegment id="36" reservedCapacity="15.894" seqLinks="6 2 23 26"/>
+			<protectionSegment id="37" reservedCapacity="17.2" seqLinks="6 2 23 27"/>
+			<protectionSegment id="38" reservedCapacity="12.616" seqLinks="6 2 23 26 35"/>
+			<protectionSegment id="39" reservedCapacity="33.054" seqLinks="10 13 15 6"/>
+			<protectionSegment id="40" reservedCapacity="23.628" seqLinks="10 13 15 7"/>
+			<protectionSegment id="41" reservedCapacity="27.16" seqLinks="10 13 15"/>
+			<protectionSegment id="42" reservedCapacity="14.664" seqLinks="9 4 8 16"/>
+			<protectionSegment id="43" reservedCapacity="15.168" seqLinks="9 4 8"/>
+			<protectionSegment id="44" reservedCapacity="14.696" seqLinks="9 3 2 22"/>
+			<protectionSegment id="45" reservedCapacity="20.144" seqLinks="9 3 2"/>
+			<protectionSegment id="46" reservedCapacity="22.184" seqLinks="10 13 17 29"/>
+			<protectionSegment id="47" reservedCapacity="21.1" seqLinks="11 32 36 25"/>
+			<protectionSegment id="48" reservedCapacity="17.034" seqLinks="10 13 18 40 34"/>
+			<protectionSegment id="49" reservedCapacity="11.068" seqLinks="10 13 18 40"/>
+			<protectionSegment id="50" reservedCapacity="9.45" seqLinks="10 13 18 41"/>
+			<protectionSegment id="51" reservedCapacity="24.728" seqLinks="10 13 18"/>
+			<protectionSegment id="52" reservedCapacity="17.72" seqLinks="12 9 3"/>
+			<protectionSegment id="53" reservedCapacity="11.754" seqLinks="13 15 7"/>
+			<protectionSegment id="54" reservedCapacity="12.87" seqLinks="12 9 4"/>
+			<protectionSegment id="55" reservedCapacity="28.15" seqLinks="13 15 7 5"/>
+			<protectionSegment id="56" reservedCapacity="14.426" seqLinks="12 9 4 8"/>
+			<protectionSegment id="57" reservedCapacity="35.358" seqLinks="13 17 29 24 22"/>
+			<protectionSegment id="58" reservedCapacity="22.87" seqLinks="13 17 29 24"/>
+			<protectionSegment id="59" reservedCapacity="27.376" seqLinks="13 17 29"/>
+			<protectionSegment id="60" reservedCapacity="25.35" seqLinks="14 20 23 25"/>
+			<protectionSegment id="61" reservedCapacity="20.12" seqLinks="13 18 41 37"/>
+			<protectionSegment id="62" reservedCapacity="23.23" seqLinks="12 11 31"/>
+			<protectionSegment id="63" reservedCapacity="20.454" seqLinks="12 11 32"/>
+			<protectionSegment id="64" reservedCapacity="20.502" seqLinks="12 11 32 38"/>
+			<protectionSegment id="65" reservedCapacity="19.936" seqLinks="16 12 9 3"/>
+			<protectionSegment id="66" reservedCapacity="10.988" seqLinks="16 12 9"/>
+			<protectionSegment id="67" reservedCapacity="20.782" seqLinks="16 12 9 4"/>
+			<protectionSegment id="68" reservedCapacity="15.2" seqLinks="15 7 5"/>
+			<protectionSegment id="69" reservedCapacity="30.59" seqLinks="15 7 5 10"/>
+			<protectionSegment id="70" reservedCapacity="23.396" seqLinks="17 29 24 22"/>
+			<protectionSegment id="71" reservedCapacity="21.538" seqLinks="17 29 24"/>
+			<protectionSegment id="72" reservedCapacity="18.468" seqLinks="18 41 36"/>
+			<protectionSegment id="73" reservedCapacity="16.986" seqLinks="18 41 36 25"/>
+			<protectionSegment id="74" reservedCapacity="22.224" seqLinks="18 41 37"/>
+			<protectionSegment id="75" reservedCapacity="16.396" seqLinks="17 29 26"/>
+			<protectionSegment id="76" reservedCapacity="22.24" seqLinks="17 29 27"/>
+			<protectionSegment id="77" reservedCapacity="24.936" seqLinks="17 29 27 38"/>
+			<protectionSegment id="78" reservedCapacity="29.402" seqLinks="19 12 9 3"/>
+			<protectionSegment id="79" reservedCapacity="15.566" seqLinks="20 21 0"/>
+			<protectionSegment id="80" reservedCapacity="23.214" seqLinks="20 21 1"/>
+			<protectionSegment id="81" reservedCapacity="21.938" seqLinks="20 21 0 5"/>
+			<protectionSegment id="82" reservedCapacity="18.524" seqLinks="20 21 1 8 16"/>
+			<protectionSegment id="83" reservedCapacity="34.458" seqLinks="20 21 1 8"/>
+			<protectionSegment id="84" reservedCapacity="25.302" seqLinks="19 13 17 29 24"/>
+			<protectionSegment id="85" reservedCapacity="12.958" seqLinks="19 13 17 29"/>
+			<protectionSegment id="86" reservedCapacity="26.38" seqLinks="20 23 25"/>
+			<protectionSegment id="87" reservedCapacity="26.076" seqLinks="20 23 27 37"/>
+			<protectionSegment id="88" reservedCapacity="14.338" seqLinks="19 12 11 31"/>
+			<protectionSegment id="89" reservedCapacity="31.444" seqLinks="19 12 11 32"/>
+			<protectionSegment id="90" reservedCapacity="21.148" seqLinks="20 23 27 38"/>
+			<protectionSegment id="91" reservedCapacity="22.488" seqLinks="22 19 12 9 3"/>
+			<protectionSegment id="92" reservedCapacity="9.058" seqLinks="22 19 12 9"/>
+			<protectionSegment id="93" reservedCapacity="22.782" seqLinks="22 19 13 15"/>
+			<protectionSegment id="94" reservedCapacity="25.494" seqLinks="21 0 5"/>
+			<protectionSegment id="95" reservedCapacity="32.106" seqLinks="21 1 8 16"/>
+			<protectionSegment id="96" reservedCapacity="32.496" seqLinks="21 1 8"/>
+			<protectionSegment id="97" reservedCapacity="34.258" seqLinks="21 1 8 16 14"/>
+			<protectionSegment id="98" reservedCapacity="26.53" seqLinks="21 1 8 17 29"/>
+			<protectionSegment id="99" reservedCapacity="36.778" seqLinks="21 1 8 17"/>
+			<protectionSegment id="100" reservedCapacity="33.142" seqLinks="22 19 12 11"/>
+			<protectionSegment id="101" reservedCapacity="26.658" seqLinks="22 19 12 11 31"/>
+			<protectionSegment id="102" reservedCapacity="29.872" seqLinks="22 19 12 11 32"/>
+			<protectionSegment id="103" reservedCapacity="36.522" seqLinks="21 1 8 18"/>
+			<protectionSegment id="104" reservedCapacity="12.878" seqLinks="25 28 15 6"/>
+			<protectionSegment id="105" reservedCapacity="14.824" seqLinks="27 37 30 9"/>
+			<protectionSegment id="106" reservedCapacity="21.02" seqLinks="24 21 1"/>
+			<protectionSegment id="107" reservedCapacity="27.456" seqLinks="24 21 0 5"/>
+			<protectionSegment id="108" reservedCapacity="14.96" seqLinks="24 22 19"/>
+			<protectionSegment id="109" reservedCapacity="16.116" seqLinks="27 38 39"/>
+			<protectionSegment id="110" reservedCapacity="30.168" seqLinks="25 28 16 14"/>
+			<protectionSegment id="111" reservedCapacity="14.586" seqLinks="25 28 16 14 20"/>
+			<protectionSegment id="112" reservedCapacity="20.678" seqLinks="27 38 39 17"/>
+			<protectionSegment id="113" reservedCapacity="29.466" seqLinks="26 34"/>
+			<protectionSegment id="114" reservedCapacity="36.044" seqLinks="27 38 40"/>
+			<protectionSegment id="115" reservedCapacity="31.978" seqLinks="26 35 41"/>
+			<protectionSegment id="116" reservedCapacity="14.752" seqLinks="26 35"/>
+			<protectionSegment id="117" reservedCapacity="23.652" seqLinks="29 24 21"/>
+			<protectionSegment id="118" reservedCapacity="20.016" seqLinks="29 24 21 0"/>
+			<protectionSegment id="119" reservedCapacity="10.886" seqLinks="29 24 21 1"/>
+			<protectionSegment id="120" reservedCapacity="15.256" seqLinks="29 27 37 30"/>
+			<protectionSegment id="121" reservedCapacity="15.024" seqLinks="29 24 22 19"/>
+			<protectionSegment id="122" reservedCapacity="15.272" seqLinks="29 27 38 39"/>
+			<protectionSegment id="123" reservedCapacity="21.284" seqLinks="28 16 14"/>
+			<protectionSegment id="124" reservedCapacity="20.486" seqLinks="28 16 14 20"/>
+			<protectionSegment id="125" reservedCapacity="32.034" seqLinks="28 18 41 36"/>
+			<protectionSegment id="126" reservedCapacity="29.458" seqLinks="28 18 40 34"/>
+			<protectionSegment id="127" reservedCapacity="26.3" seqLinks="28 18 40"/>
+			<protectionSegment id="128" reservedCapacity="21.196" seqLinks="28 18 41"/>
+			<protectionSegment id="129" reservedCapacity="27.728" seqLinks="29 27 38"/>
+			<protectionSegment id="130" reservedCapacity="20.478" seqLinks="31 33 24 21"/>
+			<protectionSegment id="131" reservedCapacity="9.888" seqLinks="31 35 39 15 7"/>
+			<protectionSegment id="132" reservedCapacity="16.476" seqLinks="31 35 39 15"/>
+			<protectionSegment id="133" reservedCapacity="14.744" seqLinks="31 35 39 16 12"/>
+			<protectionSegment id="134" reservedCapacity="32.496" seqLinks="31 35 39 16"/>
+			<protectionSegment id="135" reservedCapacity="27.878" seqLinks="30 10 13"/>
+			<protectionSegment id="136" reservedCapacity="16.3" seqLinks="31 33 24 22"/>
+			<protectionSegment id="137" reservedCapacity="14.96" seqLinks="30 9 3 2"/>
+			<protectionSegment id="138" reservedCapacity="41.372" seqLinks="31 33"/>
+			<protectionSegment id="139" reservedCapacity="20.582" seqLinks="30 10 13 17"/>
+			<protectionSegment id="140" reservedCapacity="41.874" seqLinks="32 38 40"/>
+			<protectionSegment id="141" reservedCapacity="28.82" seqLinks="31 35 41"/>
+			<protectionSegment id="142" reservedCapacity="19.17" seqLinks="31 35"/>
+			<protectionSegment id="143" reservedCapacity="10.638" seqLinks="34 30 9 3"/>
+			<protectionSegment id="144" reservedCapacity="8.318" seqLinks="33 24 21 0"/>
+			<protectionSegment id="145" reservedCapacity="15.192" seqLinks="33 24 21 1"/>
+			<protectionSegment id="146" reservedCapacity="24.586" seqLinks="35 39 16 12"/>
+			<protectionSegment id="147" reservedCapacity="18.74" seqLinks="34 30 10"/>
+			<protectionSegment id="148" reservedCapacity="13.98" seqLinks="33 25 28"/>
+			<protectionSegment id="149" reservedCapacity="14.688" seqLinks="35 39 16 14"/>
+			<protectionSegment id="150" reservedCapacity="29.816" seqLinks="35 39 16 14 20"/>
+			<protectionSegment id="151" reservedCapacity="36.634" seqLinks="34 32 36"/>
+			<protectionSegment id="152" reservedCapacity="25.256" seqLinks="35 39 17"/>
+			<protectionSegment id="153" reservedCapacity="19.154" seqLinks="33 27 37"/>
+			<protectionSegment id="154" reservedCapacity="36.65" seqLinks="34 32"/>
+			<protectionSegment id="155" reservedCapacity="33.724" seqLinks="33 27 38"/>
+			<protectionSegment id="156" reservedCapacity="11.276" seqLinks="37 30 9 3"/>
+			<protectionSegment id="157" reservedCapacity="16.594" seqLinks="36 24 21 0"/>
+			<protectionSegment id="158" reservedCapacity="13.374" seqLinks="36 24 21 1"/>
+			<protectionSegment id="159" reservedCapacity="12.6" seqLinks="38 39 16 12"/>
+			<protectionSegment id="160" reservedCapacity="16.044" seqLinks="37 30 10"/>
+			<protectionSegment id="161" reservedCapacity="21.228" seqLinks="36 25 28"/>
+			<protectionSegment id="162" reservedCapacity="14.864" seqLinks="38 39 16 14"/>
+			<protectionSegment id="163" reservedCapacity="27.472" seqLinks="38 39 16 14 20"/>
+			<protectionSegment id="164" reservedCapacity="22.376" seqLinks="37 31 33"/>
+			<protectionSegment id="165" reservedCapacity="27.272" seqLinks="38 39 17"/>
+			<protectionSegment id="166" reservedCapacity="30.51" seqLinks="36 26 34"/>
+			<protectionSegment id="167" reservedCapacity="15.718" seqLinks="37 31"/>
+			<protectionSegment id="168" reservedCapacity="21.994" seqLinks="36 26 35"/>
+			<protectionSegment id="169" reservedCapacity="18.166" seqLinks="40 33 24 21"/>
+			<protectionSegment id="170" reservedCapacity="17.224" seqLinks="40 34 30 9"/>
+			<protectionSegment id="171" reservedCapacity="10.94" seqLinks="40 33 24 21 1"/>
+			<protectionSegment id="172" reservedCapacity="23.492" seqLinks="39 16 12"/>
+			<protectionSegment id="173" reservedCapacity="16.476" seqLinks="40 34 30 10"/>
+			<protectionSegment id="174" reservedCapacity="29.672" seqLinks="40 33 25 28"/>
+			<protectionSegment id="175" reservedCapacity="21.156" seqLinks="40 33 24 22"/>
+			<protectionSegment id="176" reservedCapacity="37.058" seqLinks="39 16 14 20"/>
+			<protectionSegment id="177" reservedCapacity="28.9" seqLinks="40 33"/>
+			<protectionSegment id="178" reservedCapacity="23.612" seqLinks="40 33 25"/>
+			<protectionSegment id="179" reservedCapacity="35.884" seqLinks="40 34"/>
+			<protectionSegment id="180" reservedCapacity="21.364" seqLinks="41 37 31"/>
+			<protectionSegment id="181" reservedCapacity="38.046" seqLinks="40 34 32"/>
+			<route id="0" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList="0"/>
+			<route id="1" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList="1"/>
+			<route id="2" demandId="2" carriedTraffic="31.22" occupiedCapacity="-1.0" seqLinks="0 5" backupSegmentList="2"/>
+			<route id="3" demandId="3" carriedTraffic="32.504" occupiedCapacity="-1.0" seqLinks="1 8 16" backupSegmentList="3"/>
+			<route id="4" demandId="4" carriedTraffic="18.35" occupiedCapacity="-1.0" seqLinks="1 8" backupSegmentList="4"/>
+			<route id="5" demandId="5" carriedTraffic="23.9" occupiedCapacity="-1.0" seqLinks="2 22" backupSegmentList="5"/>
+			<route id="6" demandId="6" carriedTraffic="25.766" occupiedCapacity="-1.0" seqLinks="2" backupSegmentList="6"/>
+			<route id="7" demandId="7" carriedTraffic="19.034" occupiedCapacity="-1.0" seqLinks="2 23" backupSegmentList="7"/>
+			<route id="8" demandId="8" carriedTraffic="21.746" occupiedCapacity="-1.0" seqLinks="2 23 25" backupSegmentList="8"/>
+			<route id="9" demandId="9" carriedTraffic="16.57" occupiedCapacity="-1.0" seqLinks="0 5 11" backupSegmentList="9"/>
+			<route id="10" demandId="10" carriedTraffic="21.93" occupiedCapacity="-1.0" seqLinks="2 23 26" backupSegmentList="10"/>
+			<route id="11" demandId="11" carriedTraffic="16.722" occupiedCapacity="-1.0" seqLinks="2 23 27" backupSegmentList="11"/>
+			<route id="12" demandId="12" carriedTraffic="23.23" occupiedCapacity="-1.0" seqLinks="1 8 18" backupSegmentList="12"/>
+			<route id="13" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList="13"/>
+			<route id="14" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList="14"/>
+			<route id="15" demandId="15" carriedTraffic="29.784" occupiedCapacity="-1.0" seqLinks="5" backupSegmentList="15"/>
+			<route id="16" demandId="16" carriedTraffic="15.814" occupiedCapacity="-1.0" seqLinks="5 10" backupSegmentList="16"/>
+			<route id="17" demandId="17" carriedTraffic="18.62" occupiedCapacity="-1.0" seqLinks="4 8" backupSegmentList="17"/>
+			<route id="18" demandId="18" carriedTraffic="26.252" occupiedCapacity="-1.0" seqLinks="3 2 22" backupSegmentList="18"/>
+			<route id="19" demandId="19" carriedTraffic="17.488" occupiedCapacity="-1.0" seqLinks="3 2" backupSegmentList="19"/>
+			<route id="20" demandId="20" carriedTraffic="15.096" occupiedCapacity="-1.0" seqLinks="3 2 23" backupSegmentList="20"/>
+			<route id="21" demandId="21" carriedTraffic="11.738" occupiedCapacity="-1.0" seqLinks="4 8 17" backupSegmentList="21"/>
+			<route id="22" demandId="22" carriedTraffic="19.274" occupiedCapacity="-1.0" seqLinks="5 11" backupSegmentList="22"/>
+			<route id="23" demandId="23" carriedTraffic="18.708" occupiedCapacity="-1.0" seqLinks="5 11 31" backupSegmentList="23"/>
+			<route id="24" demandId="24" carriedTraffic="11.364" occupiedCapacity="-1.0" seqLinks="5 11 32" backupSegmentList="24"/>
+			<route id="25" demandId="25" carriedTraffic="17.13" occupiedCapacity="-1.0" seqLinks="4 8 18" backupSegmentList="25"/>
+			<route id="26" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList="26"/>
+			<route id="27" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList="27"/>
+			<route id="28" demandId="28" carriedTraffic="30.678" occupiedCapacity="-1.0" seqLinks="7 5" backupSegmentList="28"/>
+			<route id="29" demandId="29" carriedTraffic="17.066" occupiedCapacity="-1.0" seqLinks="8 16" backupSegmentList="29"/>
+			<route id="30" demandId="30" carriedTraffic="26.14" occupiedCapacity="-1.0" seqLinks="8" backupSegmentList="30"/>
+			<route id="31" demandId="31" carriedTraffic="10.462" occupiedCapacity="-1.0" seqLinks="6 2 22" backupSegmentList="31"/>
+			<route id="32" demandId="32" carriedTraffic="24.626" occupiedCapacity="-1.0" seqLinks="6 2" backupSegmentList="32"/>
+			<route id="33" demandId="33" carriedTraffic="12.312" occupiedCapacity="-1.0" seqLinks="6 2 23" backupSegmentList="33"/>
+			<route id="34" demandId="34" carriedTraffic="26.188" occupiedCapacity="-1.0" seqLinks="8 17" backupSegmentList="34"/>
+			<route id="35" demandId="35" carriedTraffic="23.086" occupiedCapacity="-1.0" seqLinks="7 5 11" backupSegmentList="35"/>
+			<route id="36" demandId="36" carriedTraffic="15.894" occupiedCapacity="-1.0" seqLinks="8 18 40" backupSegmentList="36"/>
+			<route id="37" demandId="37" carriedTraffic="17.2" occupiedCapacity="-1.0" seqLinks="8 18 41" backupSegmentList="37"/>
+			<route id="38" demandId="38" carriedTraffic="12.616" occupiedCapacity="-1.0" seqLinks="8 18" backupSegmentList="38"/>
+			<route id="39" demandId="39" carriedTraffic="33.054" occupiedCapacity="-1.0" seqLinks="9 3" backupSegmentList="39"/>
+			<route id="40" demandId="40" carriedTraffic="23.628" occupiedCapacity="-1.0" seqLinks="9" backupSegmentList="40"/>
+			<route id="41" demandId="41" carriedTraffic="27.16" occupiedCapacity="-1.0" seqLinks="9 4" backupSegmentList="41"/>
+			<route id="42" demandId="42" carriedTraffic="14.664" occupiedCapacity="-1.0" seqLinks="10" backupSegmentList="42"/>
+			<route id="43" demandId="43" carriedTraffic="15.168" occupiedCapacity="-1.0" seqLinks="10 13" backupSegmentList="43"/>
+			<route id="44" demandId="44" carriedTraffic="14.696" occupiedCapacity="-1.0" seqLinks="10 14" backupSegmentList="44"/>
+			<route id="45" demandId="45" carriedTraffic="20.144" occupiedCapacity="-1.0" seqLinks="10 14 20" backupSegmentList="45"/>
+			<route id="46" demandId="46" carriedTraffic="22.184" occupiedCapacity="-1.0" seqLinks="11 32 36" backupSegmentList="46"/>
+			<route id="47" demandId="47" carriedTraffic="21.1" occupiedCapacity="-1.0" seqLinks="10 13 17" backupSegmentList="47"/>
+			<route id="48" demandId="48" carriedTraffic="17.034" occupiedCapacity="-1.0" seqLinks="11" backupSegmentList="48"/>
+			<route id="49" demandId="49" carriedTraffic="11.068" occupiedCapacity="-1.0" seqLinks="11 31" backupSegmentList="49"/>
+			<route id="50" demandId="50" carriedTraffic="9.45" occupiedCapacity="-1.0" seqLinks="11 32" backupSegmentList="50"/>
+			<route id="51" demandId="51" carriedTraffic="24.728" occupiedCapacity="-1.0" seqLinks="11 32 38" backupSegmentList="51"/>
+			<route id="52" demandId="52" carriedTraffic="17.72" occupiedCapacity="-1.0" seqLinks="14 20 21" backupSegmentList="52"/>
+			<route id="53" demandId="53" carriedTraffic="11.754" occupiedCapacity="-1.0" seqLinks="12 9" backupSegmentList="53"/>
+			<route id="54" demandId="54" carriedTraffic="12.87" occupiedCapacity="-1.0" seqLinks="13 15" backupSegmentList="54"/>
+			<route id="55" demandId="55" carriedTraffic="28.15" occupiedCapacity="-1.0" seqLinks="12" backupSegmentList="55"/>
+			<route id="56" demandId="56" carriedTraffic="14.426" occupiedCapacity="-1.0" seqLinks="13" backupSegmentList="56"/>
+			<route id="57" demandId="57" carriedTraffic="35.358" occupiedCapacity="-1.0" seqLinks="14" backupSegmentList="57"/>
+			<route id="58" demandId="58" carriedTraffic="22.87" occupiedCapacity="-1.0" seqLinks="14 20" backupSegmentList="58"/>
+			<route id="59" demandId="59" carriedTraffic="27.376" occupiedCapacity="-1.0" seqLinks="14 20 23" backupSegmentList="59"/>
+			<route id="60" demandId="60" carriedTraffic="25.35" occupiedCapacity="-1.0" seqLinks="13 17" backupSegmentList="60"/>
+			<route id="61" demandId="61" carriedTraffic="20.12" occupiedCapacity="-1.0" seqLinks="12 11" backupSegmentList="61"/>
+			<route id="62" demandId="62" carriedTraffic="23.23" occupiedCapacity="-1.0" seqLinks="13 18 40" backupSegmentList="62"/>
+			<route id="63" demandId="63" carriedTraffic="20.454" occupiedCapacity="-1.0" seqLinks="13 18 41" backupSegmentList="63"/>
+			<route id="64" demandId="64" carriedTraffic="20.502" occupiedCapacity="-1.0" seqLinks="13 18" backupSegmentList="64"/>
+			<route id="65" demandId="65" carriedTraffic="19.936" occupiedCapacity="-1.0" seqLinks="15 6" backupSegmentList="65"/>
+			<route id="66" demandId="66" carriedTraffic="10.988" occupiedCapacity="-1.0" seqLinks="15 7" backupSegmentList="66"/>
+			<route id="67" demandId="67" carriedTraffic="20.782" occupiedCapacity="-1.0" seqLinks="15" backupSegmentList="67"/>
+			<route id="68" demandId="68" carriedTraffic="15.2" occupiedCapacity="-1.0" seqLinks="16 12" backupSegmentList="68"/>
+			<route id="69" demandId="69" carriedTraffic="30.59" occupiedCapacity="-1.0" seqLinks="16" backupSegmentList="69"/>
+			<route id="70" demandId="70" carriedTraffic="23.396" occupiedCapacity="-1.0" seqLinks="16 14" backupSegmentList="70"/>
+			<route id="71" demandId="71" carriedTraffic="21.538" occupiedCapacity="-1.0" seqLinks="16 14 20" backupSegmentList="71"/>
+			<route id="72" demandId="72" carriedTraffic="18.468" occupiedCapacity="-1.0" seqLinks="17 29" backupSegmentList="72"/>
+			<route id="73" demandId="73" carriedTraffic="16.986" occupiedCapacity="-1.0" seqLinks="17" backupSegmentList="73"/>
+			<route id="74" demandId="74" carriedTraffic="22.224" occupiedCapacity="-1.0" seqLinks="16 12 11" backupSegmentList="74"/>
+			<route id="75" demandId="75" carriedTraffic="16.396" occupiedCapacity="-1.0" seqLinks="18 40" backupSegmentList="75"/>
+			<route id="76" demandId="76" carriedTraffic="22.24" occupiedCapacity="-1.0" seqLinks="18 41" backupSegmentList="76"/>
+			<route id="77" demandId="77" carriedTraffic="24.936" occupiedCapacity="-1.0" seqLinks="18" backupSegmentList="77"/>
+			<route id="78" demandId="78" carriedTraffic="29.402" occupiedCapacity="-1.0" seqLinks="20 21" backupSegmentList="78"/>
+			<route id="79" demandId="79" carriedTraffic="15.566" occupiedCapacity="-1.0" seqLinks="19 12 9" backupSegmentList="79"/>
+			<route id="80" demandId="80" carriedTraffic="23.214" occupiedCapacity="-1.0" seqLinks="19 13 15" backupSegmentList="80"/>
+			<route id="81" demandId="81" carriedTraffic="21.938" occupiedCapacity="-1.0" seqLinks="19 12" backupSegmentList="81"/>
+			<route id="82" demandId="82" carriedTraffic="18.524" occupiedCapacity="-1.0" seqLinks="19" backupSegmentList="82"/>
+			<route id="83" demandId="83" carriedTraffic="34.458" occupiedCapacity="-1.0" seqLinks="19 13" backupSegmentList="83"/>
+			<route id="84" demandId="84" carriedTraffic="25.302" occupiedCapacity="-1.0" seqLinks="20" backupSegmentList="84"/>
+			<route id="85" demandId="85" carriedTraffic="12.958" occupiedCapacity="-1.0" seqLinks="20 23" backupSegmentList="85"/>
+			<route id="86" demandId="86" carriedTraffic="26.38" occupiedCapacity="-1.0" seqLinks="19 13 17" backupSegmentList="86"/>
+			<route id="87" demandId="87" carriedTraffic="26.076" occupiedCapacity="-1.0" seqLinks="19 12 11" backupSegmentList="87"/>
+			<route id="88" demandId="88" carriedTraffic="14.338" occupiedCapacity="-1.0" seqLinks="20 23 26" backupSegmentList="88"/>
+			<route id="89" demandId="89" carriedTraffic="31.444" occupiedCapacity="-1.0" seqLinks="20 23 27" backupSegmentList="89"/>
+			<route id="90" demandId="90" carriedTraffic="21.148" occupiedCapacity="-1.0" seqLinks="19 13 18" backupSegmentList="90"/>
+			<route id="91" demandId="91" carriedTraffic="22.488" occupiedCapacity="-1.0" seqLinks="21" backupSegmentList="91"/>
+			<route id="92" demandId="92" carriedTraffic="9.058" occupiedCapacity="-1.0" seqLinks="21 0" backupSegmentList="92"/>
+			<route id="93" demandId="93" carriedTraffic="22.782" occupiedCapacity="-1.0" seqLinks="21 1" backupSegmentList="93"/>
+			<route id="94" demandId="94" carriedTraffic="25.494" occupiedCapacity="-1.0" seqLinks="22 19 12" backupSegmentList="94"/>
+			<route id="95" demandId="95" carriedTraffic="32.106" occupiedCapacity="-1.0" seqLinks="22 19" backupSegmentList="95"/>
+			<route id="96" demandId="96" carriedTraffic="32.496" occupiedCapacity="-1.0" seqLinks="22 19 13" backupSegmentList="96"/>
+			<route id="97" demandId="97" carriedTraffic="34.258" occupiedCapacity="-1.0" seqLinks="22" backupSegmentList="97"/>
+			<route id="98" demandId="98" carriedTraffic="26.53" occupiedCapacity="-1.0" seqLinks="23" backupSegmentList="98"/>
+			<route id="99" demandId="99" carriedTraffic="36.778" occupiedCapacity="-1.0" seqLinks="23 25" backupSegmentList="99"/>
+			<route id="100" demandId="100" carriedTraffic="33.142" occupiedCapacity="-1.0" seqLinks="23 27 37" backupSegmentList="100"/>
+			<route id="101" demandId="101" carriedTraffic="26.658" occupiedCapacity="-1.0" seqLinks="23 26" backupSegmentList="101"/>
+			<route id="102" demandId="102" carriedTraffic="29.872" occupiedCapacity="-1.0" seqLinks="23 27" backupSegmentList="102"/>
+			<route id="103" demandId="103" carriedTraffic="36.522" occupiedCapacity="-1.0" seqLinks="23 27 38" backupSegmentList="103"/>
+			<route id="104" demandId="104" carriedTraffic="12.878" occupiedCapacity="-1.0" seqLinks="24 21" backupSegmentList="104"/>
+			<route id="105" demandId="105" carriedTraffic="14.824" occupiedCapacity="-1.0" seqLinks="24 21 0" backupSegmentList="105"/>
+			<route id="106" demandId="106" carriedTraffic="21.02" occupiedCapacity="-1.0" seqLinks="25 28 15" backupSegmentList="106"/>
+			<route id="107" demandId="107" carriedTraffic="27.456" occupiedCapacity="-1.0" seqLinks="27 37 30" backupSegmentList="107"/>
+			<route id="108" demandId="108" carriedTraffic="14.96" occupiedCapacity="-1.0" seqLinks="25 28 16" backupSegmentList="108"/>
+			<route id="109" demandId="109" carriedTraffic="16.116" occupiedCapacity="-1.0" seqLinks="25 28" backupSegmentList="109"/>
+			<route id="110" demandId="110" carriedTraffic="30.168" occupiedCapacity="-1.0" seqLinks="24 22" backupSegmentList="110"/>
+			<route id="111" demandId="111" carriedTraffic="14.586" occupiedCapacity="-1.0" seqLinks="24" backupSegmentList="111"/>
+			<route id="112" demandId="112" carriedTraffic="20.678" occupiedCapacity="-1.0" seqLinks="25" backupSegmentList="112"/>
+			<route id="113" demandId="113" carriedTraffic="29.466" occupiedCapacity="-1.0" seqLinks="27 37" backupSegmentList="113"/>
+			<route id="114" demandId="114" carriedTraffic="36.044" occupiedCapacity="-1.0" seqLinks="26" backupSegmentList="114"/>
+			<route id="115" demandId="115" carriedTraffic="31.978" occupiedCapacity="-1.0" seqLinks="27" backupSegmentList="115"/>
+			<route id="116" demandId="116" carriedTraffic="14.752" occupiedCapacity="-1.0" seqLinks="27 38" backupSegmentList="116"/>
+			<route id="117" demandId="117" carriedTraffic="23.652" occupiedCapacity="-1.0" seqLinks="28 15 6" backupSegmentList="117"/>
+			<route id="118" demandId="118" carriedTraffic="20.016" occupiedCapacity="-1.0" seqLinks="28 15 7" backupSegmentList="118"/>
+			<route id="119" demandId="119" carriedTraffic="10.886" occupiedCapacity="-1.0" seqLinks="28 15" backupSegmentList="119"/>
+			<route id="120" demandId="120" carriedTraffic="15.256" occupiedCapacity="-1.0" seqLinks="28 16 12" backupSegmentList="120"/>
+			<route id="121" demandId="121" carriedTraffic="15.024" occupiedCapacity="-1.0" seqLinks="28 16" backupSegmentList="121"/>
+			<route id="122" demandId="122" carriedTraffic="15.272" occupiedCapacity="-1.0" seqLinks="28" backupSegmentList="122"/>
+			<route id="123" demandId="123" carriedTraffic="21.284" occupiedCapacity="-1.0" seqLinks="29 24 22" backupSegmentList="123"/>
+			<route id="124" demandId="124" carriedTraffic="20.486" occupiedCapacity="-1.0" seqLinks="29 24" backupSegmentList="124"/>
+			<route id="125" demandId="125" carriedTraffic="32.034" occupiedCapacity="-1.0" seqLinks="29" backupSegmentList="125"/>
+			<route id="126" demandId="126" carriedTraffic="29.458" occupiedCapacity="-1.0" seqLinks="29 27 37" backupSegmentList="126"/>
+			<route id="127" demandId="127" carriedTraffic="26.3" occupiedCapacity="-1.0" seqLinks="29 26" backupSegmentList="127"/>
+			<route id="128" demandId="128" carriedTraffic="21.196" occupiedCapacity="-1.0" seqLinks="29 27" backupSegmentList="128"/>
+			<route id="129" demandId="129" carriedTraffic="27.728" occupiedCapacity="-1.0" seqLinks="28 18" backupSegmentList="129"/>
+			<route id="130" demandId="130" carriedTraffic="20.478" occupiedCapacity="-1.0" seqLinks="30 9 3" backupSegmentList="130"/>
+			<route id="131" demandId="131" carriedTraffic="9.888" occupiedCapacity="-1.0" seqLinks="30 9" backupSegmentList="131"/>
+			<route id="132" demandId="132" carriedTraffic="16.476" occupiedCapacity="-1.0" seqLinks="30 9 4" backupSegmentList="132"/>
+			<route id="133" demandId="133" carriedTraffic="14.744" occupiedCapacity="-1.0" seqLinks="30" backupSegmentList="133"/>
+			<route id="134" demandId="134" carriedTraffic="32.496" occupiedCapacity="-1.0" seqLinks="30 10" backupSegmentList="134"/>
+			<route id="135" demandId="135" carriedTraffic="27.878" occupiedCapacity="-1.0" seqLinks="32 38 39" backupSegmentList="135"/>
+			<route id="136" demandId="136" carriedTraffic="16.3" occupiedCapacity="-1.0" seqLinks="30 10 14" backupSegmentList="136"/>
+			<route id="137" demandId="137" carriedTraffic="14.96" occupiedCapacity="-1.0" seqLinks="32 36 24" backupSegmentList="137"/>
+			<route id="138" demandId="138" carriedTraffic="41.372" occupiedCapacity="-1.0" seqLinks="32 36" backupSegmentList="138"/>
+			<route id="139" demandId="139" carriedTraffic="20.582" occupiedCapacity="-1.0" seqLinks="32 36 25" backupSegmentList="139"/>
+			<route id="140" demandId="140" carriedTraffic="41.874" occupiedCapacity="-1.0" seqLinks="31" backupSegmentList="140"/>
+			<route id="141" demandId="141" carriedTraffic="28.82" occupiedCapacity="-1.0" seqLinks="32" backupSegmentList="141"/>
+			<route id="142" demandId="142" carriedTraffic="19.17" occupiedCapacity="-1.0" seqLinks="32 38" backupSegmentList="142"/>
+			<route id="143" demandId="143" carriedTraffic="10.638" occupiedCapacity="-1.0" seqLinks="33 24 21" backupSegmentList="143"/>
+			<route id="144" demandId="144" carriedTraffic="8.318" occupiedCapacity="-1.0" seqLinks="34 30 9" backupSegmentList="144"/>
+			<route id="145" demandId="145" carriedTraffic="15.192" occupiedCapacity="-1.0" seqLinks="35 39 15" backupSegmentList="145"/>
+			<route id="146" demandId="146" carriedTraffic="24.586" occupiedCapacity="-1.0" seqLinks="34 30" backupSegmentList="146"/>
+			<route id="147" demandId="147" carriedTraffic="18.74" occupiedCapacity="-1.0" seqLinks="35 39 16" backupSegmentList="147"/>
+			<route id="148" demandId="148" carriedTraffic="13.98" occupiedCapacity="-1.0" seqLinks="35 39" backupSegmentList="148"/>
+			<route id="149" demandId="149" carriedTraffic="14.688" occupiedCapacity="-1.0" seqLinks="33 24 22" backupSegmentList="149"/>
+			<route id="150" demandId="150" carriedTraffic="29.816" occupiedCapacity="-1.0" seqLinks="33 24" backupSegmentList="150"/>
+			<route id="151" demandId="151" carriedTraffic="36.634" occupiedCapacity="-1.0" seqLinks="33" backupSegmentList="151"/>
+			<route id="152" demandId="152" carriedTraffic="25.256" occupiedCapacity="-1.0" seqLinks="33 25" backupSegmentList="152"/>
+			<route id="153" demandId="153" carriedTraffic="19.154" occupiedCapacity="-1.0" seqLinks="34" backupSegmentList="153"/>
+			<route id="154" demandId="154" carriedTraffic="36.65" occupiedCapacity="-1.0" seqLinks="33 27" backupSegmentList="154"/>
+			<route id="155" demandId="155" carriedTraffic="33.724" occupiedCapacity="-1.0" seqLinks="35" backupSegmentList="155"/>
+			<route id="156" demandId="156" carriedTraffic="11.276" occupiedCapacity="-1.0" seqLinks="36 24 21" backupSegmentList="156"/>
+			<route id="157" demandId="157" carriedTraffic="16.594" occupiedCapacity="-1.0" seqLinks="37 30 9" backupSegmentList="157"/>
+			<route id="158" demandId="158" carriedTraffic="13.374" occupiedCapacity="-1.0" seqLinks="38 39 15" backupSegmentList="158"/>
+			<route id="159" demandId="159" carriedTraffic="12.6" occupiedCapacity="-1.0" seqLinks="37 30" backupSegmentList="159"/>
+			<route id="160" demandId="160" carriedTraffic="16.044" occupiedCapacity="-1.0" seqLinks="38 39 16" backupSegmentList="160"/>
+			<route id="161" demandId="161" carriedTraffic="21.228" occupiedCapacity="-1.0" seqLinks="38 39" backupSegmentList="161"/>
+			<route id="162" demandId="162" carriedTraffic="14.864" occupiedCapacity="-1.0" seqLinks="36 24 22" backupSegmentList="162"/>
+			<route id="163" demandId="163" carriedTraffic="27.472" occupiedCapacity="-1.0" seqLinks="36 24" backupSegmentList="163"/>
+			<route id="164" demandId="164" carriedTraffic="22.376" occupiedCapacity="-1.0" seqLinks="36" backupSegmentList="164"/>
+			<route id="165" demandId="165" carriedTraffic="27.272" occupiedCapacity="-1.0" seqLinks="36 25" backupSegmentList="165"/>
+			<route id="166" demandId="166" carriedTraffic="30.51" occupiedCapacity="-1.0" seqLinks="37" backupSegmentList="166"/>
+			<route id="167" demandId="167" carriedTraffic="15.718" occupiedCapacity="-1.0" seqLinks="36 26" backupSegmentList="167"/>
+			<route id="168" demandId="168" carriedTraffic="21.994" occupiedCapacity="-1.0" seqLinks="38" backupSegmentList="168"/>
+			<route id="169" demandId="169" carriedTraffic="18.166" occupiedCapacity="-1.0" seqLinks="39 15 6" backupSegmentList="169"/>
+			<route id="170" demandId="170" carriedTraffic="17.224" occupiedCapacity="-1.0" seqLinks="39 15 7" backupSegmentList="170"/>
+			<route id="171" demandId="171" carriedTraffic="10.94" occupiedCapacity="-1.0" seqLinks="39 15" backupSegmentList="171"/>
+			<route id="172" demandId="172" carriedTraffic="23.492" occupiedCapacity="-1.0" seqLinks="41 37 30" backupSegmentList="172"/>
+			<route id="173" demandId="173" carriedTraffic="16.476" occupiedCapacity="-1.0" seqLinks="39 16" backupSegmentList="173"/>
+			<route id="174" demandId="174" carriedTraffic="29.672" occupiedCapacity="-1.0" seqLinks="39" backupSegmentList="174"/>
+			<route id="175" demandId="175" carriedTraffic="21.156" occupiedCapacity="-1.0" seqLinks="39 16 14" backupSegmentList="175"/>
+			<route id="176" demandId="176" carriedTraffic="37.058" occupiedCapacity="-1.0" seqLinks="41 36 24" backupSegmentList="176"/>
+			<route id="177" demandId="177" carriedTraffic="28.9" occupiedCapacity="-1.0" seqLinks="41 36" backupSegmentList="177"/>
+			<route id="178" demandId="178" carriedTraffic="23.612" occupiedCapacity="-1.0" seqLinks="39 17" backupSegmentList="178"/>
+			<route id="179" demandId="179" carriedTraffic="35.884" occupiedCapacity="-1.0" seqLinks="41 37" backupSegmentList="179"/>
+			<route id="180" demandId="180" carriedTraffic="21.364" occupiedCapacity="-1.0" seqLinks="40" backupSegmentList="180"/>
+			<route id="181" demandId="181" carriedTraffic="38.046" occupiedCapacity="-1.0" seqLinks="41" backupSegmentList="181"/>
+			<route id="182" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="183" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="184" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="185" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="186" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="187" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="188" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="189" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="190" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="191" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="192" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="193" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="194" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="195" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="196" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="197" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="198" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="199" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="200" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="201" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="202" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="203" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="204" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="205" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="206" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="207" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="208" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="209" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="210" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="211" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="212" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="213" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="214" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="215" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="216" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="217" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="218" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="219" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="220" demandId="2" carriedTraffic="31.22" occupiedCapacity="-1.0" seqLinks="0 5" backupSegmentList=""/>
+			<route id="221" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="222" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="223" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="224" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="225" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="226" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="227" demandId="2" carriedTraffic="31.22" occupiedCapacity="-1.0" seqLinks="0 5" backupSegmentList=""/>
+			<route id="228" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="229" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="230" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="231" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="232" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="233" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="234" demandId="2" carriedTraffic="31.22" occupiedCapacity="-1.0" seqLinks="0 5" backupSegmentList=""/>
+			<route id="235" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="236" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="237" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="238" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="239" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="240" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="241" demandId="2" carriedTraffic="31.22" occupiedCapacity="-1.0" seqLinks="0 5" backupSegmentList=""/>
+			<route id="242" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="243" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="244" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="245" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="246" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="247" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="248" demandId="2" carriedTraffic="31.22" occupiedCapacity="-1.0" seqLinks="0 5" backupSegmentList=""/>
+			<route id="249" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="250" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="251" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="252" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="253" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="254" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="255" demandId="2" carriedTraffic="31.22" occupiedCapacity="-1.0" seqLinks="0 5" backupSegmentList=""/>
+			<route id="256" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="257" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="258" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="259" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="260" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="261" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="262" demandId="2" carriedTraffic="31.22" occupiedCapacity="-1.0" seqLinks="0 5" backupSegmentList=""/>
+			<route id="263" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="264" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="265" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="266" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="267" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="268" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="269" demandId="2" carriedTraffic="31.22" occupiedCapacity="-1.0" seqLinks="0 5" backupSegmentList=""/>
+			<route id="270" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="271" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="272" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="273" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="274" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="275" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="276" demandId="2" carriedTraffic="31.22" occupiedCapacity="-1.0" seqLinks="0 5" backupSegmentList=""/>
+			<route id="277" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="278" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="279" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="280" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="281" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="282" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="283" demandId="2" carriedTraffic="31.22" occupiedCapacity="-1.0" seqLinks="0 5" backupSegmentList=""/>
+			<route id="284" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="285" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="286" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="287" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="288" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="289" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="290" demandId="2" carriedTraffic="31.22" occupiedCapacity="-1.0" seqLinks="0 5" backupSegmentList=""/>
+			<route id="291" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="292" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="293" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="294" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="295" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="296" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="297" demandId="2" carriedTraffic="31.22" occupiedCapacity="-1.0" seqLinks="0 5" backupSegmentList=""/>
+			<route id="298" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="299" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="300" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="301" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+			<route id="302" demandId="0" carriedTraffic="30.008" occupiedCapacity="-1.0" seqLinks="0" backupSegmentList=""/>
+			<route id="303" demandId="1" carriedTraffic="11.93" occupiedCapacity="-1.0" seqLinks="1" backupSegmentList=""/>
+			<route id="304" demandId="2" carriedTraffic="31.22" occupiedCapacity="-1.0" seqLinks="0 5" backupSegmentList=""/>
+			<route id="305" demandId="13" carriedTraffic="32.576" occupiedCapacity="-1.0" seqLinks="3" backupSegmentList=""/>
+			<route id="306" demandId="14" carriedTraffic="12.902" occupiedCapacity="-1.0" seqLinks="4" backupSegmentList=""/>
+			<route id="307" demandId="26" carriedTraffic="21.092" occupiedCapacity="-1.0" seqLinks="6" backupSegmentList=""/>
+			<route id="308" demandId="27" carriedTraffic="26.866" occupiedCapacity="-1.0" seqLinks="7" backupSegmentList=""/>
+		</sourceRouting>
+	</layer>
+</network>
