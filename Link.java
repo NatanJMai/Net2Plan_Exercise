@@ -1,15 +1,15 @@
 
 public class Link {
 	long id;
-	boolean[] frequencia;
+	boolean[] frequency;
 	
 	public Link(long id){
 		int i = 0;
 		this.id   = id;
-		this.frequencia = new boolean[352];
+		this.frequency = new boolean[352];
 		
 		for(i = 0; i < 352; i++)
-			this.frequencia[i] = false;
+			this.frequency[i] = false;
 		
 	}
 	
@@ -21,7 +21,7 @@ public class Link {
 		int qtd_aux = 0;
 		int pos_aux = 0;
 		
-		System.arraycopy( frequencia, 0, backup, 0, frequencia.length );
+		System.arraycopy( frequency, 0, backup, 0, frequency.length );
 		
 		/* Regra da continuidade */
 		for(ind_aux = 0; ind_aux < 352; ind_aux++){
@@ -30,7 +30,7 @@ public class Link {
 				break;
 			}
 			
-			if(frequencia[ind_aux] == false){
+			if(frequency[ind_aux] == false){
 				qtd_aux++;
 				pos_aux = ind_aux;
 			}else{
@@ -42,15 +42,15 @@ public class Link {
 		
 		if(pos_aux < 352 && pos_aux >= 0){
 			for(ind_aux = pos_aux; ind_aux < qtd + pos_aux; ind_aux++){
-				if(this.frequencia[ind_aux] == false){
-					this.frequencia[ind_aux] = true;
+				if(this.frequency[ind_aux] == false){
+					this.frequency[ind_aux] = true;
 				}
 			}	
 		}
 		
 		
 		if(found == false){
-			frequencia = backup;
+			frequency = backup;
 		}
 		
 		return found;
