@@ -41,6 +41,11 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 	public List <Link> 		    Links 	    = new ArrayList<Link>(); 
 	public Map<Integer, Double> data_rate   = new HashMap<Integer, Double>();
 	
+	public List<List<List<Long>>> list_primary 	= new ArrayList<List<List<Long>>>();
+	public List<List<List<Long>>> list_backup 	= new ArrayList<List<List<Long>>>();
+	List<List<Long>> list_aux_p	= new ArrayList<List<Long>>();
+	List<List<Long>> list_aux_b	= new ArrayList<List<Long>>();
+	
 	public int[][] demand_10 = new int[4][4];
 
 	
@@ -81,7 +86,7 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 				
 				if(disjoint) {
 					linksAux 	= GraphUtils.getTwoLinkDisjointPaths(linkMap, i, j, linkCostMap);
-					System.out.println("Links Disjuntos (LinksAux)   -> " + linksAux);
+//					System.out.println("Links Disjuntos (LinksAux)   -> " + linksAux);
 					linkBackup	= linksAux.get(0);
 					
 					if(linkBackup.containsAll(primary_path) && primary_path.containsAll(linkBackup)){
@@ -204,6 +209,73 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 	}
 	
 	
+	public void print_lists(List<List<List<Long>>> list){
+		for(int i = 0; i < list.size(); i++) {
+			System.out.println("------------- Nos "  + list.get(i).get(1).get(0) + " -> " + list.get(i).get(1).get(1));
+			System.out.println("------------- Link " + list.get(i).get(0));
+			System.out.println();
+		}
+		
+	}
+	
+	public void print_freq(List<Long> path){
+		for(Long p: path){
+			Link link = get_link(p);
+			
+			for(int i = 0; i < 352; i++){
+				if(link.frequency[i] == true){
+					System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAA " + link.frequency[i] + " " + i);	
+				}
+			}	
+			
+		}
+			
+	}
+	
+	
+	public boolean overlaps(List<Long> bi){
+		List<Integer> list_freq_i = new ArrayList<Integer>();
+		List<Integer> list_freq_j = new ArrayList<Integer>();
+		
+		for(Long path_i: bi){
+			Link link_i = get_link(path_i);
+			
+			for(int i = 0; i < 352; i++){
+				if(link_i.frequency[i] == true){
+					list_freq_i.add(i);
+				}
+			}
+		}
+		
+		for(List<Long> bj: list_aux_b){
+			list_freq_j.clear();
+			
+			for(Long path_j: bj){
+				Link link_j = get_link(path_j);
+			
+				for(int i = 0; i < 352; i++){
+					if(link_j.frequency[i] == true){
+						list_freq_j.add(i);
+					}
+				}
+			}
+			
+			for(int i = 0; i < list_freq_i.size(); i++){
+				for(int j = 0; j < list_freq_j.size(); j++){
+					if(list_freq_i.get(i) == list_freq_j.get(j)){
+						return true;
+					}
+				}
+			}
+		}
+		
+		
+		
+		return false;
+	}
+	
+	
+	
 	@Override
 	public String executeAlgorithm(NetPlan netPlan, Map<String, String> algorithmParameters, Map<String, String> net2planParameters)
 	{
@@ -232,6 +304,7 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 		
 		
 		
+//		[[[1, 3, 4, 5], [i, j]]]
 		
 		/* Inicializa vetor de nos para a criacao das classes */
 		if (! start_nodes(linkIds)) error();
@@ -241,6 +314,37 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 		
 		/* Inicializa a matriz de demanda */
 		start_demand_array();
+		
+		for(i = 0; i < demand_10.length; i++){
+			for(j = 0; j < demand_10.length; j++){
+				if(this.demand_10[i][j] != 0){
+					List<Long> 	     list_ij	= new ArrayList<Long>();
+					
+					list_ij.add((long) i);
+					list_ij.add((long) j);
+					
+					primary_path = get_primary_path(i, j, netPlan, shortestPathType, linkIds, false, null);
+					backup_path  = get_disjoint_path(i, j, netPlan, shortestPathType, linkIds, primary_path);
+					
+					list_aux_p.add(primary_path);
+					list_aux_b.add(backup_path);
+					
+					
+					list_aux_p.add(list_ij);
+					list_aux_b.add(list_ij);
+					
+					list_primary.add(list_aux_p);
+					list_backup.add(list_aux_b);
+				}
+			}
+		}
+		
+		System.out.println("Primario: ");
+		print_lists(list_primary);
+		
+		
+		System.out.println("Backup: ");
+		print_lists(list_backup);
 		
 		for(i = 0; i < demand_10.length; i++){
 			for(j = 0; j < demand_10.length; j++){
@@ -287,7 +391,11 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 							/* Bi is not end of path list */
 							if(b_path != backup_path.get(backup_path.size() - 1)){
 								if(ret == true){
-									/* fBi > 0. Linha 29 */								
+									/* fBi > 0. Linha 29 */
+									if(overlaps(backup_path)){
+										System.out.println("\nAEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE\n");
+									}
+									print_freq(backup_path);
 								}
 							}
 						}
