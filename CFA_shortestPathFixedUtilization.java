@@ -41,6 +41,9 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 	public List <Link> 		    Links 	    = new ArrayList<Link>(); 
 	public Map<Integer, Double> data_rate   = new HashMap<Integer, Double>();
 	
+	public Map<List<Long>, List<Long>> primary_backup_list   = new HashMap<List<Long>, List<Long>>();
+	
+	
 	public List<List<List<Long>>> list_primary 	= new ArrayList<List<List<Long>>>();
 	public List<List<List<Long>>> list_backup 	= new ArrayList<List<List<Long>>>();
 	List<List<Long>> list_aux_p	= new ArrayList<List<Long>>();
@@ -224,7 +227,7 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 			
 			for(int i = 0; i < 352; i++){
 				if(link.frequency[i] == true){
-					System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAA " + link.frequency[i] + " " + i);	
+//					System.out.println(link.frequency[i] + " " + i);	
 				}
 			}	
 			
@@ -233,12 +236,14 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 	}
 	
 	
-	public boolean overlaps(List<Long> bi){
+	public List<Long> overlaps(List<Long> bi){
 		List<Integer> list_freq_i = new ArrayList<Integer>();
 		List<Integer> list_freq_j = new ArrayList<Integer>();
+		Link link_i = null;
+		Link link_j = null;
 		
 		for(Long path_i: bi){
-			Link link_i = get_link(path_i);
+			link_i = get_link(path_i);
 			
 			for(int i = 0; i < 352; i++){
 				if(link_i.frequency[i] == true){
@@ -251,7 +256,7 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 			list_freq_j.clear();
 			
 			for(Long path_j: bj){
-				Link link_j = get_link(path_j);
+				link_j = get_link(path_j);
 			
 				for(int i = 0; i < 352; i++){
 					if(link_j.frequency[i] == true){
@@ -263,15 +268,13 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 			for(int i = 0; i < list_freq_i.size(); i++){
 				for(int j = 0; j < list_freq_j.size(); j++){
 					if(list_freq_i.get(i) == list_freq_j.get(j)){
-						return true;
+						return bj;
 					}
 				}
 			}
 		}
 		
-		
-		
-		return false;
+		return null;
 	}
 	
 	
@@ -289,6 +292,9 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 		
 		List<Long> primary_path   = new ArrayList<Long>();	
 		List<Long> backup_path    = new ArrayList<Long>();
+		List<Long> backup_j		  = new ArrayList<Long>();
+		List<Long> primary_j	  = new ArrayList<Long>();
+		
 //		Set<Long>  nodeIds		  = netPlan.getNodeIds();
 		Set<Long>  linkIds 		  = netPlan.getLinkIds();
 		
@@ -335,16 +341,11 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 					
 					list_primary.add(list_aux_p);
 					list_backup.add(list_aux_b);
+					
 				}
 			}
 		}
 		
-		System.out.println("Primario: ");
-		print_lists(list_primary);
-		
-		
-		System.out.println("Backup: ");
-		print_lists(list_backup);
 		
 		for(i = 0; i < demand_10.length; i++){
 			for(j = 0; j < demand_10.length; j++){
@@ -379,6 +380,9 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 					
 					/* Step-2 - Inicio */
 					backup_path = get_disjoint_path(i, j, netPlan, shortestPathType, linkIds, primary_path);
+					
+					primary_backup_list.put(backup_path, primary_path);
+					
 					if(backup_path.isEmpty()){
 						continue;
 					}else{
@@ -392,8 +396,13 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 							if(b_path != backup_path.get(backup_path.size() - 1)){
 								if(ret == true){
 									/* fBi > 0. Linha 29 */
-									if(overlaps(backup_path)){
-										System.out.println("\nAEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE\n");
+									
+									backup_j = overlaps(backup_path);
+									if(backup_j != null){
+										/* Paramos aqui - Fazer linha 31 */
+										System.out.println("bj = " + backup_j);
+										System.out.println("Teste = " + primary_backup_list.get(backup_j));
+										
 									}
 									print_freq(backup_path);
 								}
@@ -411,7 +420,7 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 		}
 		
 		
-		print_links();
+//		print_links();
 
 		
 		
