@@ -1,12 +1,14 @@
 
 public class Link {
 	long id;
+	int splitting;
 	boolean[] frequency;
 	
 	public Link(long id){
-		int i = 0;
-		this.id   = id;
+		int i 	  	   = 0;
+		this.id   	   = id;
 		this.frequency = new boolean[352];
+		this.splitting = 0;
 		
 		for(i = 0; i < 352; i++)
 			this.frequency[i] = false;

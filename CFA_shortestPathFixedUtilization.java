@@ -49,7 +49,7 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 	List<List<Long>> list_aux_p	= new ArrayList<List<Long>>();
 	List<List<Long>> list_aux_b	= new ArrayList<List<Long>>();
 	
-	public int[][] demand_10 = new int[4][4];
+	public int[][] demand_10 = new int[13][13];
 
 	
 	public void reject(){
@@ -122,6 +122,7 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 		demand_10[0][1] = 1;
 		demand_10[0][2] = 1;
 		demand_10[0][3] = 180;
+		demand_10[0][12] = 2;
 		
 		demand_10[1][0] = 1;
 		demand_10[1][1] = 0;
@@ -132,6 +133,7 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 		demand_10[2][1] = 1;
 		demand_10[2][2] = 0;
 		demand_10[2][3] = 0;
+		
 		
 		return;
 	}
@@ -278,6 +280,17 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 	}
 	
 	
+	public boolean isDisjoint(List<Long> pi, List<Long> pj){
+		for(Long p_pi: pi){
+			for(Long p_pj: pj){
+				if(p_pi == p_pj)
+					return false;
+			}
+		}
+		
+		return true;
+	}
+	
 	
 	@Override
 	public String executeAlgorithm(NetPlan netPlan, Map<String, String> algorithmParameters, Map<String, String> net2planParameters)
@@ -294,6 +307,10 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 		List<Long> backup_path    = new ArrayList<Long>();
 		List<Long> backup_j		  = new ArrayList<Long>();
 		List<Long> primary_j	  = new ArrayList<Long>();
+		List<Long> primary_i	  = new ArrayList<Long>();
+		
+		List<List<Long>> pathAceitos 	                = new ArrayList<List<Long>>();
+		List<List<Long>> pathAceitosSemCompartilhamento = new ArrayList<List<Long>>();
 		
 //		Set<Long>  nodeIds		  = netPlan.getNodeIds();
 		Set<Long>  linkIds 		  = netPlan.getLinkIds();
@@ -399,14 +416,42 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 									
 									backup_j = overlaps(backup_path);
 									if(backup_j != null){
-										/* Paramos aqui - Fazer linha 31 */
-										System.out.println("bj = " + backup_j);
-										System.out.println("Teste = " + primary_backup_list.get(backup_j));
+										
+										//pi = primary_path
+										//pj = primary_backup_list.get(backup_j)
+										
+										primary_i = primary_path;
+										primary_j = primary_backup_list.get(backup_j);
+										
+//										System.out.println("bj = " + backup_j);
+//										System.out.println("Teste = " + primary_backup_list.get(backup_j));
+										
+										if(isDisjoint(primary_i, primary_j)) {
+                                            if(link.splitting < 2) {
+                                            	link.splitting++;
+                                            	
+                                            	if(!pathAceitos.contains(backup_path)){
+                                            		pathAceitos.add(backup_path);
+                                            	}
+                                            	
+                                            }else{
+                                                continue; // Repeat Step-3 for another fBi
+                                            }
+                                        }else{
+                                            continue; // Repeat Step-3 for another fBi
+                                        }
 										
 									}
 									print_freq(backup_path);
+								}else{
+			                      	if(!pathAceitosSemCompartilhamento.contains(backup_path)){
+			                      		pathAceitosSemCompartilhamento.add(backup_path); // Accept backup path Bi without sharing
+                                	}
 								}
+							}else{
+								reject(); // Reject the connection
 							}
+							/* Step-3 - Fim */
 						}
 						
 						System.out.println("Link backup -> " + backup_path);	
@@ -418,6 +463,10 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 				}
 			}
 		}
+		
+		System.out.println("Caminhos aceitos: " + pathAceitos);
+		System.out.println("Caminhos aceitos sem compartilhamento: " + pathAceitosSemCompartilhamento);
+		System.out.println("Rejeitados: " + rejeitados);
 		
 		
 //		print_links();
