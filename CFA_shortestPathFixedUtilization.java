@@ -49,7 +49,8 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 	List<List<Long>> list_aux_p	= new ArrayList<List<Long>>();
 	List<List<Long>> list_aux_b	= new ArrayList<List<Long>>();
 	
-	public int[][] demand_10 = new int[13][13];
+	public Demand demand = new Demand();
+	public int[][] demand_10 = demand.startDemand();
 
 	
 	public void reject(){
@@ -117,28 +118,6 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 	}
 	
 	
-	public void start_demand_array(){
-		demand_10[0][0] = 0;
-		demand_10[0][1] = 1;
-		demand_10[0][2] = 1;
-		demand_10[0][3] = 180;
-		demand_10[0][12] = 2;
-		
-		demand_10[1][0] = 1;
-		demand_10[1][1] = 0;
-		demand_10[1][2] = 2;
-		demand_10[1][3] = 0;
-		
-		demand_10[2][0] = 2;
-		demand_10[2][1] = 1;
-		demand_10[2][2] = 0;
-		demand_10[2][3] = 0;
-		
-		
-		return;
-	}
-	
-	
 	public boolean start_nodes(Set<Long> nodeIds){
 		for(long l: nodeIds){
 			Link new_link = new Link(l);
@@ -164,12 +143,9 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 	public boolean run_demand(Link link_i, int rate){
 		boolean retorno = true;
 		
-//		System.out.print("No " + i + " -> " + j + "  = ");
-//		System.out.println(rate);
-		
 		if(! link_i.insert_array(rate)){
 			retorno = false;
-			reject();
+//			reject();
 		}
 		
 		return retorno;
@@ -255,27 +231,29 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 		}
 		
 		for(List<Long> bj: list_aux_b){
-			list_freq_j.clear();
+			if(!bj.containsAll(bi)){
 			
-			for(Long path_j: bj){
-				link_j = get_link(path_j);
-			
-				for(int i = 0; i < 352; i++){
-					if(link_j.frequency[i] == true){
-						list_freq_j.add(i);
+				list_freq_j.clear();
+				
+				for(Long path_j: bj){
+					link_j = get_link(path_j);
+				
+					for(int i = 0; i < 352; i++){
+						if(link_j.frequency[i] == true){
+							list_freq_j.add(i);
+						}
 					}
 				}
-			}
-			
-			for(int i = 0; i < list_freq_i.size(); i++){
-				for(int j = 0; j < list_freq_j.size(); j++){
-					if(list_freq_i.get(i) == list_freq_j.get(j)){
-						return bj;
+				
+				for(int i = 0; i < list_freq_i.size(); i++){
+					for(int j = 0; j < list_freq_j.size(); j++){
+						if(list_freq_i.get(i) == list_freq_j.get(j)){
+							return bj;
+						}
 					}
 				}
 			}
 		}
-		
 		return null;
 	}
 	
@@ -315,7 +293,7 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 //		Set<Long>  nodeIds		  = netPlan.getNodeIds();
 		Set<Long>  linkIds 		  = netPlan.getLinkIds();
 		
-		if (N == 0 || E == 0)	throw new Net2PlanException("This algorithm natan a topology with links and a demand set");
+		if (N == 0 || E == 0)	throw new Net2PlanException("ERRO");
 
 		/* Initialize some variables */
 		final double cg = Double.parseDouble(algorithmParameters.get("cg"));
@@ -336,7 +314,7 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 		start_data_rates();
 		
 		/* Inicializa a matriz de demanda */
-		start_demand_array();
+//		start_demand_array();
 		
 		for(i = 0; i < demand_10.length; i++){
 			for(j = 0; j < demand_10.length; j++){
@@ -349,12 +327,10 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 					primary_path = get_primary_path(i, j, netPlan, shortestPathType, linkIds, false, null);
 					backup_path  = get_disjoint_path(i, j, netPlan, shortestPathType, linkIds, primary_path);
 					
+					primary_backup_list.put(backup_path, primary_path);
+					
 					list_aux_p.add(primary_path);
 					list_aux_b.add(backup_path);
-					
-					
-					list_aux_p.add(list_ij);
-					list_aux_b.add(list_ij);
 					
 					list_primary.add(list_aux_p);
 					list_backup.add(list_aux_b);
@@ -362,7 +338,6 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 				}
 			}
 		}
-		
 		
 		for(i = 0; i < demand_10.length; i++){
 			for(j = 0; j < demand_10.length; j++){
@@ -386,7 +361,7 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 							rate = (int) ((data_rate.get(10) / 12.5) * demand_10[i][j]);
 							
 							if(run_demand(link, rate) == false){
-								if(path != primary_path.get(primary_path.size() - 1)) /* Se nao for o ultimo elemento da lista de caminhos  */
+								if(path != primary_path.get(primary_path.size() - 1)) /* Se nao for o ultimo caminho da lista de caminhos  */
 									continue;
 								else
 									reject();
@@ -398,7 +373,7 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 					/* Step-2 - Inicio */
 					backup_path = get_disjoint_path(i, j, netPlan, shortestPathType, linkIds, primary_path);
 					
-					primary_backup_list.put(backup_path, primary_path);
+//					primary_backup_list.put(backup_path, primary_path);
 					
 					if(backup_path.isEmpty()){
 						continue;
@@ -420,11 +395,9 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 										//pi = primary_path
 										//pj = primary_backup_list.get(backup_j)
 										
+										
 										primary_i = primary_path;
 										primary_j = primary_backup_list.get(backup_j);
-										
-//										System.out.println("bj = " + backup_j);
-//										System.out.println("Teste = " + primary_backup_list.get(backup_j));
 										
 										if(isDisjoint(primary_i, primary_j)) {
                                             if(link.splitting < 2) {
@@ -437,17 +410,17 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
                                             }else{
                                                 continue; // Repeat Step-3 for another fBi
                                             }
-                                        }else{
-                                            continue; // Repeat Step-3 for another fBi
                                         }
 										
+									}else{
+				                      	if(!pathAceitosSemCompartilhamento.contains(backup_path)){
+				                      		pathAceitosSemCompartilhamento.add(backup_path); // Accept backup path Bi without sharing
+	                                	}
 									}
 									print_freq(backup_path);
 								}else{
-			                      	if(!pathAceitosSemCompartilhamento.contains(backup_path)){
-			                      		pathAceitosSemCompartilhamento.add(backup_path); // Accept backup path Bi without sharing
-                                	}
-								}
+                                    continue; // Repeat Step-3 for another fBi
+                                }
 							}else{
 								reject(); // Reject the connection
 							}
@@ -464,29 +437,18 @@ public class CFA_shortestPathFixedUtilization implements IAlgorithm
 			}
 		}
 		
+		System.out.println("\n---------------------------\n");
 		System.out.println("Caminhos aceitos: " + pathAceitos);
-		System.out.println("Caminhos aceitos sem compartilhamento: " + pathAceitosSemCompartilhamento);
-		System.out.println("Rejeitados: " + rejeitados);
+//		System.out.println("Caminhos aceitos sem compartilhamento: " + pathAceitosSemCompartilhamento);
+		System.out.println("Probabilidade de bloqueio (links): " + rejeitados);
 		
-		
-//		print_links();
-
-		
-		
-
-		
-
-		/* For each link, set the capacity as the one which fixes the utilization to the given value */
-//		Map<Long, Double> y_e = netPlan.getLinkCarriedTrafficMap();
-//		for (long linkId : linkIds) netPlan.setLinkCapacity(linkId, y_e.get(linkId) / cg);
-
-		return "Oksss!";
+		return "Algoritmo finalizado!";
 	}
 
 	@Override
 	public String getDescription()
 	{
-		return "Algoritmo de Redes: Eliton, Natan e Ricardo";
+		return "Algoritmo de Redes: Natan e Ricardo";
 	}
 
 	@Override
